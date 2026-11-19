@@ -32,3 +32,4 @@ yarn-error.log*
 # Cloudflare / Wrangler local state
 .wrangler/
 .dev.vars
+.venv/
