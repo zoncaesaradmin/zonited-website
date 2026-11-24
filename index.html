@@ -30,15 +30,15 @@
     />
     <meta name="twitter:image" content="https://zonited.com/assets/logo/zon-logo.png" />
     <meta name="twitter:image:alt" content="Zonited logo" />
-    <link rel="icon" type="image/png" sizes="32x32" href="./assets/brand/favicon-32.png?v=zonited59" />
-    <link rel="icon" type="image/png" sizes="16x16" href="./assets/brand/favicon-16.png?v=zonited59" />
-    <link rel="stylesheet" href="./styles.css?v=zonited59" />
+    <link rel="icon" type="image/png" sizes="32x32" href="./assets/brand/favicon-32.png?v=chips5" />
+    <link rel="icon" type="image/png" sizes="16x16" href="./assets/brand/favicon-16.png?v=chips5" />
+    <link rel="stylesheet" href="./styles.css?v=chips5" />
   </head>
   <body>
     <div class="page-shell">
       <header class="topbar">
         <a class="brand" href="#top" aria-label="Zonited Solutions home">
-          <img class="brand-mark" src="./assets/brand/zon-mark.png?v=zonited59" width="1254" height="1254" alt="" aria-hidden="true" />
+          <img class="brand-mark" src="./assets/brand/zon-mark.png?v=chips5" width="1254" height="1254" alt="" aria-hidden="true" />
           <span class="brand-text">Zonited Solutions</span>
         </a>
         <nav class="topnav" aria-label="Primary">
@@ -66,7 +66,7 @@
             <div class="path-tile-head">
               <span class="path-kicker">On WhatsApp</span>
               <div class="wa-title-row">
-                <img class="wa-logo" src="./assets/brand/whatsapp.svg?v=zonited59" width="40" height="40" alt="" />
+                <img class="wa-logo" src="./assets/brand/whatsapp.svg?v=chips5" width="40" height="40" alt="" />
                 <h2>Join your neighborhood</h2>
               </div>
               <p>Join the Zonity for your apartment, colony, street, or workplace — and unlock more benefits and deals.</p>
@@ -75,6 +75,7 @@
           </a>
 
           <a
+            id="become-provider"
             class="path-tile path-tile-whatsapp path-tile-whatsapp-alt"
             href="https://wa.me/918310880446?text=Hi%2C%20I%20would%20like%20to%20register%20interest%20as%20a%20partner%20%2F%20operator%20%2F%20vendor%20for%20Zonity."
             target="_blank"
@@ -83,7 +84,7 @@
             <div class="path-tile-head">
               <span class="path-kicker">On WhatsApp</span>
               <div class="wa-title-row">
-                <img class="wa-logo" src="./assets/brand/whatsapp.svg?v=zonited59" width="40" height="40" alt="" />
+                <img class="wa-logo" src="./assets/brand/whatsapp.svg?v=chips5" width="40" height="40" alt="" />
                 <h2>Offer what you sell nearby</h2>
               </div>
               <p>Offer your goods or services to Zonities — and grow your customers faster.</p>
@@ -134,94 +135,121 @@
             <div class="family-head">
               <h2>Within your Zonity</h2>
             </div>
-            <p class="family-lead">For people in the same apartment, colony, street, or workplace.</p>
-            <div class="service-grid service-grid-dense">
-              <div class="service-tile is-live">
-                                <span class="service-status">Available</span>
-                <strong>Rentals in your Zonity</strong>
-              </div>
-              <div class="service-tile is-grayed" aria-disabled="true">
-                <span class="service-status">Coming</span>
-                <strong>Fund collection</strong>
-              </div>
-              <div class="service-tile is-grayed" aria-disabled="true">
-                <span class="service-status">Coming</span>
-                <strong>Home cook &amp; community kitchen</strong>
-              </div>
-              <div class="service-tile is-grayed" aria-disabled="true">
-                <span class="service-status">Coming</span>
-                <strong>Community activities</strong>
-              </div>
-              <div class="service-tile is-grayed" aria-disabled="true">
-                <span class="service-status">Coming</span>
-                <strong>Neighbor help</strong>
-              </div>
-            </div>
+            <ul class="service-chip-list">
+              <li>
+                <span class="service-chip is-available" tabindex="0" data-tip=="List or find homes or shops to rent within your Zonity. Optionally make the listing visible across other Zonities.">
+                  Rentals in your Zonity
+                </span>
+              </li>
+              <li>
+                <span class="service-chip is-coming" tabindex="0" data-tip=="Pool money with neighbors for shared needs — festivals, repairs, gifts, or community projects — with clear tracking inside your Zonity.">
+                  Fund collection
+                </span>
+              </li>
+              <li>
+                <span class="service-chip is-coming" tabindex="0" data-tip=="Pay a periodic bill toward common water sourcing for your Zonity — with clear tracking, so you avoid messy WhatsApp threads and confusion.">
+                  Water bill collection
+                </span>
+              </li>
+              <li>
+                <span class="service-chip is-coming" tabindex="0" data-tip=="Order home-cooked meals from neighbors, or run a small community kitchen that serves people in your Zonity.">
+                  Home cook / community kitchen
+                </span>
+              </li>
+              <li>
+                <span class="service-chip is-coming" tabindex="0" data-tip=="Create and join local activities — sports, walks, kids’ play, festivals, and get-togethers — with people in your Zonity.">
+                  Community activities
+                </span>
+              </li>
+              <li>
+                <span class="service-chip is-coming" tabindex="0" data-tip=="Post a clear request — a few hours of help, company for an errand, borrowing a tool — and let neighbors volunteer free or for a small fee.">
+                  Neighbor help
+                </span>
+              </li>
+            </ul>
           </div>
 
           <div class="explore-family" id="services-outside">
             <div class="family-head">
               <h2>From providers outside your Zonity</h2>
             </div>
-            <p class="family-lead">Vendors and pros who come in to serve your Zonity — and many more.</p>
-            <div class="service-grid service-grid-dense">
-              <div class="service-tile is-live">
-                                <span class="service-status">Available</span>
-                <strong>Fresh fruits &amp; vegetables</strong>
-              </div>
-              <div class="service-tile is-live">
-                                <span class="service-status">Available</span>
-                <strong>Grocery delivery</strong>
-              </div>
-              <div class="service-tile is-grayed" aria-disabled="true">
-                <span class="service-status">Coming</span>
-                <strong>Laundry</strong>
-              </div>
-              <div class="service-tile is-grayed" aria-disabled="true">
-                <span class="service-status">Coming</span>
-                <strong>Water can delivery</strong>
-              </div>
-              <div class="service-tile is-grayed" aria-disabled="true">
-                <span class="service-status">Coming</span>
-                <strong>Diagnostics &amp; lab tests</strong>
-              </div>
-              <div class="service-tile is-grayed" aria-disabled="true">
-                <span class="service-status">Coming</span>
-                <strong>Home maintenance</strong>
-              </div>
-              <div class="service-tile is-grayed" aria-disabled="true">
-                <span class="service-status">Coming</span>
-                <strong>Facility maintenance</strong>
-              </div>
-              <div class="service-tile is-grayed" aria-disabled="true">
-                <span class="service-status">Coming</span>
-                <strong>Find a plumber</strong>
-              </div>
-              <div class="service-tile is-grayed" aria-disabled="true">
-                <span class="service-status">Coming</span>
-                <strong>Find an electrician</strong>
-              </div>
-            </div>
+            <ul class="service-chip-list">
+              <li>
+                <span class="service-chip is-available" tabindex="0" data-tip=="Order fresh fruits and vegetables from outside vendors into scheduled delivery windows for your Zonity.">
+                  Fresh fruits &amp; vegetables
+                </span>
+              </li>
+              <li>
+                <span class="service-chip is-available" tabindex="0" data-tip=="Get grocery orders delivered to your Zonity on a clear schedule from providers who serve your area.">
+                  Grocery delivery
+                </span>
+              </li>
+              <li>
+                <span class="service-chip is-coming" tabindex="0" data-tip=="Book scheduled laundry pickup and drop-off through providers who collect from and return to your Zonity.">
+                  Laundry
+                </span>
+              </li>
+              <li>
+                <span class="service-chip is-coming" tabindex="0" data-tip=="Schedule drinking-water can delivery to your apartment, colony, or workplace on a recurring or on-demand basis.">
+                  Water can delivery
+                </span>
+              </li>
+              <li>
+                <span class="service-chip is-coming" tabindex="0" data-tip=="Book lab tests and diagnostic services that visit or serve people in your Zonity.">
+                  Diagnostics &amp; lab tests
+                </span>
+              </li>
+              <li>
+                <span class="service-chip is-coming" tabindex="0" data-tip=="Schedule recurring home upkeep — cleaning, minor repairs, and preventive maintenance — from outside providers.">
+                  Periodic home maintenance
+                </span>
+              </li>
+              <li>
+                <span class="service-chip is-coming" tabindex="0" data-tip=="Coordinate upkeep for shared spaces in apartments, campuses, and workplaces — not just individual homes.">
+                  Facility maintenance
+                </span>
+              </li>
+              <li>
+                <span class="service-chip is-coming" tabindex="0" data-tip=="Browse plumbers who cover your Zonity and pre-book a visit on a clear schedule for repairs or routine checks.">
+                  Find a plumber
+                </span>
+              </li>
+              <li>
+                <span class="service-chip is-coming" tabindex="0" data-tip=="Browse electricians who cover your Zonity and pre-book a visit on a clear schedule for repairs or routine checks.">
+                  Find an electrician
+                </span>
+              </li>
+            </ul>
           </div>
 
           <div class="explore-family" id="services-platform">
             <div class="family-head">
               <h2>Across Zonities on the platform</h2>
             </div>
-            <p class="family-lead">Platform services that work beyond a single neighborhood.</p>
-            <div class="service-grid service-grid-dense">
-              <div class="service-tile is-live">
-                <span class="service-status">Available</span>
-                <strong>Rentals across the city</strong>
-              </div>
-              <div class="service-tile is-grayed" aria-disabled="true">
-                <span class="service-status">Coming</span>
-                <strong>Commercial zones</strong>
-              </div>
-            </div>
+            <ul class="service-chip-list">
+              <li>
+                <span class="service-chip is-available" tabindex="0" data-tip=="Search and enquire about rentals across the city — beyond your own Zonity — through the platform.">
+                  Rentals across the city
+                </span>
+              </li>
+              <li>
+                <span class="service-chip is-coming" tabindex="0" data-tip=="Move goods and deliveries across commercial zones that span more than one neighborhood on the platform.">
+                  Delivery across commercial zones
+                </span>
+              </li>
+              <li>
+                <span class="service-chip is-coming" tabindex="0" data-tip=="Move stock from wholesalers to retailers across Zonities — scheduled drops, clear routes, and less last-minute chasing.">
+                  Wholesale-to-retail delivery
+                </span>
+              </li>
+            </ul>
           </div>
 
-          <p class="map-note">Availability depends on your Zonity. Message us on WhatsApp to learn what is enabled near you.</p>
+          <p class="map-note">
+            What you can use depends on what’s enabled and offered in your Zonity.
+            Want to provide a service?
+            <a href="#become-provider">Become a provider</a>
+          </p>
         </section>
       </main>
 

@@ -368,61 +368,99 @@ a.path-tile { color: inherit; }
 .legend-live::before { background: var(--action-deep-sage); }
 .legend-soon::before { background: rgba(59, 44, 44, 0.28); }
 
-.service-grid {
-  display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 12px;
-  margin-top: 18px;
-}
-.service-grid-dense { margin-top: 12px; }
-.service-tile {
+.service-chip-list {
   display: flex;
-  flex-direction: column;
-  gap: 10px;
-  min-height: 118px;
-  padding: 18px 16px;
-  border-radius: var(--radius-lg);
-  border: 1px solid var(--surface-warm);
-  background: rgba(255, 255, 255, 0.94);
-  box-shadow: var(--shadow);
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
 }
-a.service-tile.is-live:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 20px 40px rgba(59, 44, 44, 0.12);
+.service-chip {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  max-width: 100%;
+  padding: 8px 13px;
+  border-radius: 999px;
+  border: 1px solid rgba(131, 173, 139, 0.45);
+  background: rgba(255, 255, 255, 0.88);
+  color: var(--text-soft);
+  font-size: 0.95rem;
+  font-weight: 500;
+  line-height: 1.3;
+  cursor: help;
 }
-.service-tile strong {
-  font-family: "Iowan Old Style", "Palatino Linotype", "Book Antiqua", serif;
-  font-size: 1.15rem;
-  line-height: 1.2;
-  color: var(--brand-burgundy);
-}
-.service-status {
-  font-size: 0.68rem;
-  font-weight: 700;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
+.service-chip.is-available {
+  border-color: rgba(73, 109, 80, 0.4);
+  background: var(--surface-sage);
   color: var(--action-deep-sage);
 }
-.service-tile.is-live {
-  border-color: rgba(131, 173, 139, 0.55);
-  background: linear-gradient(180deg, #fff, var(--surface-sage));
+.service-chip.is-coming {
+  border-style: dashed;
+  border-color: rgba(59, 44, 44, 0.2);
+  background: rgba(255, 255, 255, 0.72);
+  color: #7a6a6a;
 }
-.service-tile.is-grayed {
-  opacity: 0.55;
-  filter: grayscale(0.35);
-  background: rgba(255, 255, 255, 0.7);
-  box-shadow: none;
-  cursor: default;
+.service-chip:hover,
+.service-chip:focus {
+  outline: none;
+  box-shadow: 0 0 0 2px rgba(73, 109, 80, 0.18);
+  z-index: 2;
 }
-.service-tile.is-grayed .service-status { color: var(--text-soft); }
-.service-tile.is-grayed strong { color: var(--text-soft); }
+.service-chip::after {
+  content: attr(data-tip);
+  position: absolute;
+  left: 50%;
+  bottom: calc(100% + 10px);
+  transform: translateX(-50%) translateY(4px);
+  width: max-content;
+  max-width: min(280px, 70vw);
+  padding: 10px 12px;
+  border-radius: 12px;
+  background: var(--text-primary);
+  color: var(--brand-cream);
+  font-size: 0.92rem;
+  font-weight: 500;
+  line-height: 1.45;
+  text-align: left;
+  white-space: normal;
+  box-shadow: var(--shadow);
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transition: opacity 0.15s ease, transform 0.15s ease, visibility 0.15s;
+  z-index: 5;
+}
+.service-chip:hover::after,
+.service-chip:focus::after {
+  opacity: 1;
+  visibility: visible;
+  transform: translateX(-50%) translateY(0);
+}
 .map-note {
-  margin: 18px 0 0;
+  margin: 40px 0 0;
+  padding-top: 22px;
+  border-top: 1px solid color-mix(in srgb, var(--brand-burgundy) 12%, transparent);
   text-align: center;
   color: var(--text-soft);
-  font-size: 0.92rem;
-  line-height: 1.55;
+  font-size: 0.95rem;
+  line-height: 1.65;
+  max-width: 42rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.map-note a {
+  color: var(--brand-burgundy);
+  font-weight: 600;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.map-note a:hover,
+.map-note a:focus-visible {
+  color: var(--deep-sage, #496d50);
 }
 
 /* —— Explore page —— */
@@ -433,18 +471,11 @@ a.service-tile.is-live:hover {
   align-items: center;
   justify-content: space-between;
   gap: 12px;
-  margin-bottom: 4px;
+  margin-bottom: 12px;
 }
 .family-head h2 {
   font-size: 1.35rem;
   color: var(--brand-burgundy);
-}
-.family-lead {
-  margin: 0 0 14px;
-  max-width: 48ch;
-  color: var(--text-soft);
-  font-size: 0.98rem;
-  line-height: 1.5;
 }
 .badge {
   flex: 0 0 auto;
@@ -522,12 +553,8 @@ a.service-tile.is-live:hover {
 
 @media (max-width: 800px) {
   .path-strip,
-  .explore-cta-strip,
-  .service-grid {
+  .explore-cta-strip {
     grid-template-columns: 1fr;
-  }
-  .service-grid-dense {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 }
 
@@ -550,8 +577,9 @@ a.service-tile.is-live:hover {
   .platform-band-lead { font-size: 1.02rem; line-height: 1.5; }
   .gateway-hero { padding: 28px 4px 18px; }
   .path-tile { min-height: 0; padding: 22px 18px; }
-  .service-grid-dense { grid-template-columns: 1fr; }
   .family-head { align-items: flex-start; flex-direction: column; }
+  .service-chip { font-size: 0.9rem; }
+  .service-chip::after { font-size: 0.88rem; }
   .legal-card { padding: 24px; }
   .site-footer { flex-direction: column; align-items: flex-start; }
 }
