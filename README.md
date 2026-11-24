@@ -1,8 +1,37 @@
 # Zonited Website
 
-A self-contained static homepage for Zonited (zonited.com), ready to deploy through Cloudflare Pages.
+Static visual gateway for Zonited Solutions (`zonited.com`), deployed on Cloudflare Pages.
 
-Members request access or place pre-orders for fruits and flowers by zonity and time slot through WhatsApp. The site itself has no backend and no order catalog — it routes people to WhatsApp with clear join vs order intents.
+The marketing site is **not** the product app. It explains the idea briefly, shows a services map, and sends people to WhatsApp for interest.
+
+## Surface split
+
+| Surface | Role |
+|---|---|
+| `zonited.com` (this repo) | Brand gateway, diagrams, services map, outbound WhatsApp links |
+| WhatsApp `wa.me/918310880446` | Soft interest / D2C contact (Join / Become a provider prefilled messages) |
+| `app.zonited.com` (future) | Login, Zonity membership, per-zone enabled vs grayed services |
+
+## Brand references
+
+Source-of-truth brand files live under [`brand/`](brand/):
+
+- [`brand/zonited-brand-colors.md`](brand/zonited-brand-colors.md) — colour palette and usage rules
+- [`brand/logos/`](brand/logos/) — circular and square logo masters
+- [`brand/diagrams/`](brand/diagrams/) — Zonity concept diagrams
+
+Web-served copies:
+
+| Use | Path |
+|---|---|
+| Header mark | `assets/brand/zon-mark.png` |
+| Wordmark | `assets/brand/zonited-wordmark.png` (from square logo) |
+| Favicons | `assets/brand/favicon-16.png`, `favicon-32.png` |
+| Square / OG | `assets/logo/zon-logo.png` |
+| Zonity diagram | `assets/zonity-diagram.png` |
+| WhatsApp mark | `assets/brand/whatsapp.svg` |
+
+Core colours: burgundy `#7F1D3D`, fresh sage `#83AD8B`, warm cream `#FFF9F1`, espresso text `#3B2C2C`, deep sage `#496D50`.
 
 ## Deploy with Cloudflare Pages
 
@@ -15,19 +44,23 @@ Members request access or place pre-orders for fruits and flowers by zonity and 
 
 ```bash
 python3 -m http.server 8000
+# or: make serve
 ```
 
 Open `http://localhost:8000`.
 
 ## Site direction
 
-- Buyer-first marketing page for zonity-local fruit and flower pre-orders.
-- Membership is allowlisted; join and zonity tying happen in WhatsApp chat.
-- Same WhatsApp number for both CTAs; pre-filled message text differs.
-- Temporary ZoneON logo and colour system until a Zonited brand mark is ready.
+- Single homepage: Zonited intro → WhatsApp tiles → How it works (Zonity) → Services map.
+- Primary exits: two WhatsApp tiles — **Join a Zonity** and **Become a provider**.
+- Services section: **Services you may use or offer** — Within your Zonity; From providers outside your Zonity; Across Zonities on the platform.
+- **Zonited** = platform; **Zonity** = community experience.
 
-Contact WhatsApp: `+91 83108 80446` (`wa.me/918310880446`).
+WhatsApp prefilled messages:
+
+- Residents: `Hi, I would like to learn more about joining a Zonity.`
+- Partners: `Hi, I would like to register interest as a partner / operator / vendor for Zonity.`
 
 ## Search and sharing metadata
 
-The HTML head includes a search description, Open Graph sharing metadata, and a summary card using the circular logo. The canonical website URL is `https://zonited.com/`. Keep the search and sharing descriptions consistent when editing them. Publish `index.html` and the referenced logo asset together for public link previews to use the updates.
+Canonical URL: `https://zonited.com/`. Keep OG/Twitter descriptions aligned with the gateway positioning when editing them.
