@@ -26,7 +26,8 @@ html { scroll-behavior: smooth; }
 #services,
 #services-inside,
 #services-outside,
-#services-platform {
+#services-platform,
+#about {
   scroll-margin-top: 100px;
 }
 
@@ -134,39 +135,42 @@ a { color: inherit; text-decoration: none; }
   width: 100%;
   height: 100%;
   object-fit: cover;
-  object-position: 58% center;
-  transform: scale(1.04);
+  /* Prefer left: shop + people stay in frame; crop spare houses on the right */
+  object-position: left center;
+  transform: scale(1.02);
   animation: hero-drift 22s ease-in-out infinite alternate;
 }
+/* Optional soft dots — kept tiny on desktop; hidden on small screens
+   (hero JPEG already has service badges; large floats looked odd on mobile). */
 .benefit-float {
   position: absolute;
   border-radius: 999px;
   pointer-events: none;
   filter: blur(0.2px);
-  opacity: 0.72;
+  opacity: 0.45;
   animation: float-soft 7s ease-in-out infinite;
 }
 .benefit-float-a {
-  width: 54px;
-  height: 54px;
-  left: 12%;
-  top: 18%;
+  width: 14px;
+  height: 14px;
+  left: 8%;
+  top: 12%;
   background: color-mix(in srgb, var(--brand-fresh-sage) 70%, white);
   animation-delay: 0s;
 }
 .benefit-float-b {
-  width: 34px;
-  height: 34px;
-  right: 18%;
-  top: 28%;
+  width: 10px;
+  height: 10px;
+  right: 10%;
+  top: 22%;
   background: color-mix(in srgb, var(--brand-burgundy) 55%, white);
   animation-delay: -2.4s;
 }
 .benefit-float-c {
-  width: 22px;
-  height: 22px;
-  left: 28%;
-  bottom: 22%;
+  width: 8px;
+  height: 8px;
+  left: 22%;
+  top: 30%;
   background: color-mix(in srgb, var(--brand-cream) 80%, var(--brand-fresh-sage));
   animation-delay: -4.2s;
 }
@@ -238,8 +242,9 @@ a { color: inherit; text-decoration: none; }
 }
 
 @keyframes hero-drift {
+  /* Drift only upward/right slightly so the left (shop) is not panned away */
   from { transform: scale(1.02) translate3d(0, 0, 0); }
-  to { transform: scale(1.07) translate3d(-1.5%, 1%, 0); }
+  to { transform: scale(1.045) translate3d(1%, -0.6%, 0); }
 }
 @keyframes float-soft {
   0%, 100% { transform: translate3d(0, 0, 0); opacity: 0.55; }
@@ -468,6 +473,34 @@ a.path-tile { color: inherit; }
 /* —— Visual blocks —— */
 .visual-block { padding: 56px 0 0; }
 .page-shell > .visual-block:first-child { padding-top: 36px; }
+.about-block { padding-bottom: 8px; }
+.about-band {
+  margin-top: 0;
+  max-width: 42rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+.about-visual {
+  margin: 22px 0 0;
+  overflow: hidden;
+  border-radius: var(--radius-xl);
+  border: 1px solid var(--surface-warm);
+  background: rgba(255, 255, 255, 0.9);
+  box-shadow: var(--shadow);
+}
+.about-visual-image {
+  display: block;
+  width: 100%;
+  height: auto;
+  vertical-align: middle;
+}
+.about-visual figcaption {
+  padding: 12px 18px 16px;
+  border-top: 1px solid var(--line);
+  color: var(--text-soft);
+  font-size: 0.92rem;
+  text-align: center;
+}
 .visual-block-head { text-align: center; margin-bottom: 22px; }
 .visual-block-head h2 {
   font-size: clamp(1.6rem, 3.5vw, 2.2rem);
@@ -725,8 +758,9 @@ a.path-tile { color: inherit; }
     max-height: 240px;
   }
   .benefit-hero-image {
-    object-position: center 40%;
+    object-position: left 40%;
   }
+  .benefit-float { display: none; }
   .benefit-hero-copy {
     padding: 22px 18px 24px;
   }

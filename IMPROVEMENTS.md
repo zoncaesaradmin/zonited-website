@@ -39,7 +39,6 @@ Living backlog for the static gateway (`zonited.com`). Work through items in **b
 - [x] Primary actions as compact WhatsApp CTAs in the hero (Join / Become a provider) — heavy path tiles removed from first viewport.
 - [x] Brand test improved: wordmark + benefit line + visual without opening on a definition band.
 - [ ] Iterate tagline/support copy until it feels right (working draft in hero).
-- [ ] Optional: try fruit-basket lifestyle crop (`assets/zonited-hero-offer.jpg`) as alternate hero media A/B.
 - [ ] Avoid stacking stats, promos, or secondary marketing in the first viewport (keep watching).
 
 **Constraints:** Soft WhatsApp interest only; no fake app UI.
@@ -147,4 +146,7 @@ Living backlog for the static gateway (`zonited.com`). Work through items in **b
 |---|---|
 | 2025–2026 (ongoing) | Gateway Option A; dual WA CTAs; services chips + tips; mobile tap + viewport-clamped tip; family leads removed; `i` icons removed; explore folded in; `make serve` on `0.0.0.0` |
 | 2026-11-25 | Benefit-first hero: neighborhood board image (~320KB), wordmark, tagline “Everything you need, around you.”, slim WA CTAs; definition band removed from first viewport; Zonity stays below |
+| 2026-11-25 | Moved “What is Zonited?” platform copy to `#about` before footer; About nav link |
+| 2026-11-25 | Benefit hero finalized: `assets/hero/neighborhood-board.jpg` (painterly colony + apartments; iteration options folder removed) |
+| 2026-11-25 | About section: commercial/industrial board under definition (`assets/hero/commercial-board.jpg`) |
 | | |
