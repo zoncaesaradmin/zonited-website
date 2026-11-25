@@ -43,11 +43,14 @@ Core colours: burgundy `#7F1D3D`, fresh sage `#83AD8B`, warm cream `#FFF9F1`, es
 ## Local preview
 
 ```bash
-python3 -m http.server 8000
-# or: make serve
+make serve
 ```
 
-Open `http://localhost:8000`.
+Binds to all interfaces (`0.0.0.0:8000`), so you can open `http://localhost:8000` on this machine, or `http://<your-LAN-IP>:8000` from a phone on the same Wi‑Fi. The serve target prints the LAN URL when it starts.
+
+## Improvements backlog
+
+Incremental next work (visual clarity, less prose, hygiene) is tracked in [`IMPROVEMENTS.md`](IMPROVEMENTS.md). Work through steps over multiple sessions; do not treat it as a single ship.
 
 ## Site direction
 
