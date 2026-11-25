@@ -1,6 +1,6 @@
 # Zonited Website
 
-Static visual gateway for Zonited Solutions (`zonited.com`), deployed on Cloudflare Pages.
+Static visual gateway for Zonited (`zonited.com`), deployed on Cloudflare Pages.
 
 The marketing site is **not** the product app. It explains the idea briefly, shows a services map, and sends people to WhatsApp for interest.
 
