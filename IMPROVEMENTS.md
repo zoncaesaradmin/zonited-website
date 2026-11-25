@@ -86,7 +86,7 @@ Living backlog for the static gateway (`zonited.com`). Work through items in **b
 - [ ] Sync `privacy.html` cache-bust / asset query params with homepage (`?v=…`).
 - [ ] Stronger OG/Twitter share image (landscape or dedicated social crop; square logo is weak in link previews).
 - [ ] Remove or archive dead CSS (e.g. unused `.gateway-hero`, explore-page leftovers if unused).
-- [ ] Remove or wire unused `script.js` (currently a no-op stub).
+- [x] Remove unused `script.js` no-op stub.
 - [ ] Prune or document unused assets (`assets/logo-concepts/`, unused hero images) so the tree stays intentional.
 - [ ] Confirm Cloudflare Pages deploy matches local `make serve` preview.
 - [ ] Spot-check Privacy content still matches WhatsApp-interest + static site reality.

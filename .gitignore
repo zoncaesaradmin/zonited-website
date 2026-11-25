@@ -33,3 +33,6 @@ yarn-error.log*
 .wrangler/
 .dev.vars
 .venv/
+
+# Scratch tooling venvs
+.venv-img/
