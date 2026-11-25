@@ -17,7 +17,7 @@
       property="og:description"
       content="Simplify neighborhood life — local services and shared workflows, in one community."
     />
-    <meta property="og:image" content="https://zonited.com/assets/brand/og-share.jpg" />
+    <meta property="og:image" content="https://zonited.com/assets/brand/og-share.jpg?v=hero47" />
     <meta property="og:image:type" content="image/jpeg" />
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
@@ -28,17 +28,20 @@
       name="twitter:description"
       content="Simplify neighborhood life — local services and shared workflows, in one community."
     />
-    <meta name="twitter:image" content="https://zonited.com/assets/brand/og-share.jpg" />
+    <meta name="twitter:image" content="https://zonited.com/assets/brand/og-share.jpg?v=hero47" />
     <meta name="twitter:image:alt" content="Zonited — everything you need, around you" />
-    <link rel="icon" type="image/png" sizes="32x32" href="./assets/brand/favicon-32.png?v=hero43" />
-    <link rel="icon" type="image/png" sizes="16x16" href="./assets/brand/favicon-16.png?v=hero43" />
-    <link rel="stylesheet" href="./styles.css?v=hero43" />
+    <link rel="icon" type="image/png" sizes="32x32" href="./assets/brand/favicon-32.png?v=hero47" />
+    <link rel="icon" type="image/png" sizes="16x16" href="./assets/brand/favicon-16.png?v=hero47" />
+    <link rel="apple-touch-icon" href="./assets/brand/apple-touch-icon.png?v=hero47" />
+    <meta name="theme-color" content="#fff9f1" />
+    <link rel="stylesheet" href="./styles.css?v=hero47" />
   </head>
   <body>
+    <a class="skip-link" href="#main">Skip to content</a>
     <div class="page-shell page-shell-top" id="top">
       <header class="topbar">
         <a class="brand" href="#top" aria-label="Zonited home">
-          <img class="brand-mark" src="./assets/brand/zon-mark.png?v=hero43" width="1254" height="1254" alt="" aria-hidden="true" />
+          <img class="brand-mark" src="./assets/brand/zon-mark-sm.png?v=hero47" width="512" height="512" alt="" aria-hidden="true" />
           <span class="brand-text">Zonited</span>
         </a>
         <nav class="topnav" aria-label="Primary">
@@ -49,13 +52,13 @@
       </header>
     </div>
 
-    <main>
+    <main id="main">
       <section class="benefit-hero" aria-labelledby="benefit-heading">
         <div class="benefit-hero-stage">
           <div class="benefit-hero-media" aria-hidden="true">
             <img
               class="benefit-hero-image"
-              src="./assets/hero/neighborhood-board.jpg?v=hero43"
+              src="./assets/hero/neighborhood-board.jpg?v=hero47"
               width="1600"
               height="900"
               alt=""
@@ -66,7 +69,7 @@
           <div class="benefit-hero-copy">
             <img
               class="benefit-hero-wordmark"
-              src="./assets/brand/zonited-wordmark.png?v=hero43"
+              src="./assets/brand/zonited-wordmark.png?v=hero47"
               width="420"
               height="122"
               alt="Zonited"
@@ -82,7 +85,7 @@
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <img class="wa-logo" src="./assets/brand/whatsapp.svg?v=hero43" width="28" height="28" alt="" />
+                <img class="wa-logo" src="./assets/brand/whatsapp.svg?v=hero47" width="28" height="28" alt="" />
                 Join a Zonity
               </a>
               <a
@@ -92,7 +95,7 @@
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <img class="wa-logo" src="./assets/brand/whatsapp.svg?v=hero43" width="28" height="28" alt="" />
+                <img class="wa-logo" src="./assets/brand/whatsapp.svg?v=hero47" width="28" height="28" alt="" />
                 Become a provider
               </a>
             </div>
@@ -107,13 +110,20 @@
             <h2 id="zonity-heading">Your neighborhood zone, connected</h2>
           </div>
           <figure class="diagram-board">
-            <img
-              src="./assets/zonity-diagram.png?v=z4b4"
-              width="1254"
-              height="1254"
-              alt="Zonity diagram: a local colony map connecting residents, shops, and services around a shared place"
-              loading="lazy"
-            />
+            <picture>
+              <source
+                type="image/webp"
+                srcset="./assets/zonity-diagram.webp?v=hero47"
+              />
+              <img
+                src="./assets/zonity-diagram.jpg?v=hero47"
+                width="1254"
+                height="1254"
+                alt="Zonity diagram: a local colony map connecting residents, shops, and services around a shared place"
+                loading="lazy"
+                decoding="async"
+              />
+            </picture>
           </figure>
         </section>
 
@@ -131,7 +141,7 @@
           <div class="explore-family family-within" id="services-inside">
             <div class="family-head">
               <p class="family-cue">Inside</p>
-              <h2>Within your Zonity</h2>
+              <h3>Within your Zonity</h3>
             </div>
             <ul class="service-chip-list">
               <li>
@@ -158,7 +168,7 @@
           <div class="explore-family family-outside" id="services-outside">
             <div class="family-head">
               <p class="family-cue">Into your zone</p>
-              <h2>From providers outside your Zonity</h2>
+              <h3>From providers outside your Zonity</h3>
             </div>
             <ul class="service-chip-list">
               <li>
@@ -194,7 +204,7 @@
           <div class="explore-family family-across" id="services-platform">
             <div class="family-head">
               <p class="family-cue">Citywide &amp; trade</p>
-              <h2>Across Zonities on the platform</h2>
+              <h3>Across Zonities on the platform</h3>
             </div>
             <ul class="service-chip-list">
               <li>
@@ -213,7 +223,11 @@
           <p class="map-note">
             What you can use depends on what’s enabled and offered in your Zonity.
             Want to provide a service?
-            <a href="#become-provider">Become a provider</a>
+            <a
+              href="https://wa.me/918310880446?text=Hi%2C%20I%20would%20like%20to%20register%20interest%20as%20a%20partner%20%2F%20operator%20%2F%20vendor%20for%20Zonity."
+              target="_blank"
+              rel="noopener noreferrer"
+            >Become a provider</a>
           </p>
         </section>
 
@@ -236,7 +250,7 @@
           <figure class="about-visual">
             <img
               class="about-visual-image"
-              src="./assets/hero/commercial-board.jpg?v=hero43"
+              src="./assets/hero/commercial-board.jpg?v=hero47"
               width="1600"
               height="900"
               alt="Commercial and light-industrial Zonity with shops, workshops, and local trade"
@@ -248,9 +262,9 @@
           <div class="about-seal">
             <img
               class="about-seal-mark"
-              src="./assets/brand/zon-mark.png?v=hero43"
-              width="1254"
-              height="1254"
+              src="./assets/brand/zon-mark-sm.png?v=hero47"
+              width="512"
+              height="512"
               alt="Zonited mark — people connected as a Z"
               loading="lazy"
               decoding="async"
@@ -264,7 +278,10 @@
     <div class="page-shell page-shell-foot">
       <footer class="site-footer">
         <p>© Zonited</p>
-        <a href="./privacy.html">Privacy</a>
+        <nav class="footer-meta" aria-label="Site">
+          <a class="footer-app" href="https://app.zonited.com/">Already in a Zonity? Open the app</a>
+          <a href="./privacy.html">Privacy</a>
+        </nav>
       </footer>
     </div>
 
@@ -273,13 +290,15 @@
       (function () {
         var brand = document.querySelector(".brand[href='#top']");
         if (!brand) return;
+        var reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
         brand.addEventListener("click", function (e) {
           e.preventDefault();
+          var behavior = reduceMotion.matches ? "auto" : "smooth";
           var target = document.getElementById("top");
           if (target && typeof target.scrollIntoView === "function") {
-            target.scrollIntoView({ behavior: "smooth", block: "start" });
+            target.scrollIntoView({ behavior: behavior, block: "start" });
           } else {
-            window.scrollTo({ top: 0, behavior: "smooth" });
+            window.scrollTo({ top: 0, behavior: behavior });
           }
           if (history.replaceState) {
             history.replaceState(null, "", "#top");
@@ -290,27 +309,50 @@
       })();
 
       (function () {
+        var board = document.querySelector(".diagram-board");
+        if (!board || !("IntersectionObserver" in window)) return;
+        if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+        var io = new IntersectionObserver(
+          function (entries) {
+            entries.forEach(function (entry) {
+              if (!entry.isIntersecting) return;
+              board.classList.add("is-shown");
+              io.disconnect();
+            });
+          },
+          { threshold: 0.2 }
+        );
+        io.observe(board);
+      })();
+
+      (function () {
         var chips = Array.prototype.slice.call(document.querySelectorAll(".service-chip[data-tip]"));
         if (!chips.length) return;
 
         var GAP = 12;
         var MARGIN = 12;
+        var TIP_ID = "service-tip-live";
         var active = null;
         var tip = document.createElement("div");
+        tip.id = TIP_ID;
         tip.className = "service-tip-pop";
         tip.setAttribute("role", "tooltip");
+        tip.setAttribute("aria-hidden", "true");
         tip.hidden = true;
         document.body.appendChild(tip);
 
         var finePointer = window.matchMedia("(hover: hover) and (pointer: fine)");
+        var reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
 
         function closeAll() {
           chips.forEach(function (chip) {
             chip.classList.remove("is-open");
             chip.setAttribute("aria-expanded", "false");
+            chip.removeAttribute("aria-describedby");
           });
           active = null;
           tip.classList.remove("is-visible");
+          tip.setAttribute("aria-hidden", "true");
           tip.hidden = true;
           tip.textContent = "";
         }
@@ -349,7 +391,10 @@
           // If tip sits below the fold a bit, bring chip+tip into view
           var tipBottom = top + tipRect.height + MARGIN;
           if (tipBottom > window.innerHeight) {
-            chip.scrollIntoView({ block: "center", behavior: "smooth" });
+            chip.scrollIntoView({
+              block: "center",
+              behavior: reduceMotion.matches ? "auto" : "smooth"
+            });
             window.requestAnimationFrame(function () {
               if (active === chip) placeTip(chip);
             });
@@ -361,6 +406,8 @@
           active = chip;
           chip.classList.add("is-open");
           chip.setAttribute("aria-expanded", "true");
+          chip.setAttribute("aria-describedby", TIP_ID);
+          tip.setAttribute("aria-hidden", "false");
           placeTip(chip);
         }
 
@@ -404,6 +451,41 @@
         window.addEventListener("resize", function () {
           if (active) placeTip(active);
         });
+
+        // One soft pulse on first Available chip when services enter view (once per session)
+        try {
+          if (
+            !reduceMotion.matches &&
+            !sessionStorage.getItem("zon-chip-hint") &&
+            "IntersectionObserver" in window
+          ) {
+            var services = document.getElementById("services");
+            var firstAvailable = document.querySelector(".service-chip.is-available");
+            if (services && firstAvailable) {
+              var hintIo = new IntersectionObserver(
+                function (entries) {
+                  entries.forEach(function (entry) {
+                    if (!entry.isIntersecting) return;
+                    hintIo.disconnect();
+                    sessionStorage.setItem("zon-chip-hint", "1");
+                    firstAvailable.classList.add("chip-hint");
+                    firstAvailable.addEventListener(
+                      "animationend",
+                      function () {
+                        firstAvailable.classList.remove("chip-hint");
+                      },
+                      { once: true }
+                    );
+                  });
+                },
+                { threshold: 0.35 }
+              );
+              hintIo.observe(services);
+            }
+          }
+        } catch (e) {
+          /* sessionStorage may be blocked */
+        }
       })();
     </script>
   </body>

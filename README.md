@@ -24,12 +24,14 @@ Web-served copies:
 
 | Use | Path |
 |---|---|
-| Header mark | `assets/brand/zon-mark.png` |
+| Header / seal mark | `assets/brand/zon-mark-sm.png` (512px web); master `zon-mark.png` |
 | Wordmark | `assets/brand/zonited-wordmark.png` (from square logo) |
 | Favicons | `assets/brand/favicon-16.png`, `favicon-32.png` |
-| Square / OG | `assets/logo/zon-logo.png` |
-| Zonity diagram | `assets/zonity-diagram.png` |
+| OG / Twitter share | `assets/brand/og-share.jpg` (1200×630) |
+| Zonity diagram | `assets/zonity-diagram.webp` (+ `.jpg` fallback) |
+| Apple touch icon | `assets/brand/apple-touch-icon.png` |
 | WhatsApp mark | `assets/brand/whatsapp.svg` |
+| Hero boards | `assets/hero/neighborhood-board.jpg`, `commercial-board.jpg` |
 
 Core colours: burgundy `#7F1D3D`, fresh sage `#83AD8B`, warm cream `#FFF9F1`, espresso text `#3B2C2C`, deep sage `#496D50`.
 

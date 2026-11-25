@@ -61,10 +61,10 @@ Living backlog for the static gateway (`zonited.com`). Work through items in **b
 
 **Goal:** People discover that chips open detail without a paragraph of instruction.
 
-- [ ] Non-verbal cue that chips are tappable/hoverable (press state, subtle pulse once, or equivalent).
-- [ ] Confirm fixed tooltip stays inset from viewport edges with clear gap (already improved; regression-check on small phones).
-- [ ] Optional: one-time gentle demo on first Available chip (only if it does not feel gimmicky).
-- [ ] Keyboard/screen-reader: expanded state and tooltip remain understandable.
+- [x] Non-verbal cue that chips are tappable/hoverable (press state, subtle pulse once, or equivalent).
+- [x] Confirm fixed tooltip stays inset from viewport edges with clear gap (already improved; regression-check on small phones).
+- [x] Optional: one-time gentle demo on first Available chip (only if it does not feel gimmicky).
+- [x] Keyboard/screen-reader: expanded state and tooltip remain understandable.
 
 ---
 
@@ -72,10 +72,10 @@ Living backlog for the static gateway (`zonited.com`). Work through items in **b
 
 **Goal:** Presence and hierarchy, not noise. Aim for **2–3** intentional motions.
 
-- [ ] Soft entrance for path tiles and/or diagram.
-- [ ] Tip appear/disappear already partly handled — keep consistent with any new motion language.
-- [ ] Respect `prefers-reduced-motion`.
-- [ ] Do not reintroduce opacity/`both` bugs that previously hid content.
+- [x] Soft entrance for path tiles and/or diagram.
+- [x] Tip appear/disappear already partly handled — keep consistent with any new motion language.
+- [x] Respect `prefers-reduced-motion`.
+- [x] Do not reintroduce opacity/`both` bugs that previously hid content.
 
 ---
 
@@ -83,13 +83,13 @@ Living backlog for the static gateway (`zonited.com`). Work through items in **b
 
 **Goal:** Repo and deploy match what we actually show.
 
-- [ ] Sync `privacy.html` cache-bust / asset query params with homepage (`?v=…`).
-- [ ] Stronger OG/Twitter share image (landscape or dedicated social crop; square logo is weak in link previews).
-- [ ] Remove or archive dead CSS (e.g. unused `.gateway-hero`, explore-page leftovers if unused).
+- [x] Sync `privacy.html` cache-bust / asset query params with homepage (`?v=…`).
+- [x] Stronger OG/Twitter share image (landscape or dedicated social crop; square logo is weak in link previews).
+- [x] Remove or archive dead CSS (e.g. unused `.gateway-hero`, explore-page leftovers if unused).
 - [x] Remove unused `script.js` no-op stub.
-- [ ] Prune or document unused assets (`assets/logo-concepts/`, unused hero images) so the tree stays intentional.
+- [x] Prune or document unused assets (`assets/logo-concepts/`, unused hero images) so the tree stays intentional.
 - [ ] Confirm Cloudflare Pages deploy matches local `make serve` preview.
-- [ ] Spot-check Privacy content still matches WhatsApp-interest + static site reality.
+- [x] Spot-check Privacy content still matches WhatsApp-interest + static site reality.
 
 ---
 
@@ -97,9 +97,40 @@ Living backlog for the static gateway (`zonited.com`). Work through items in **b
 
 **Goal:** Only if services still feel abstract after Steps 1–3.
 
-- [ ] Small diagram or schematic for Within / Outside / Across (not another essay).
-- [ ] Or a refined services “board” layout that makes the three families obvious at a glance.
-- [ ] Re-evaluate unused brand diagrams under `brand/diagrams/` before drawing new art.
+- [x] ~~Small diagram or schematic for Within / Outside / Across~~ — **not needed**: Step 3 three-panel services map already carries the beat.
+- [x] ~~Or a refined services “board” layout~~ — covered by Step 3 accented columns.
+- [x] Re-evaluate unused brand diagrams under `brand/diagrams/` before drawing new art — `Zonity_without_name.png` kept as unused reference only.
+
+---
+
+## Post Steps 1–7 — small UX hygiene (next pass)
+
+Steps 1–7 are closed. Keep only low-impact wins that help UX without redesign, heavy JS, or more copy.
+
+### Shipped in this pass (`?v=hero46`)
+
+- [x] Smaller web mark (`zon-mark-sm.png` 512px) for topbar + seal — avoid shipping 1.1 MB mark twice.
+- [x] `:focus-visible` on topnav + footer links.
+- [x] Honor `prefers-reduced-motion` for CSS + JS smooth scroll (logo, tip reposition).
+- [x] Services family titles demoted to `h3` under the section `h2`.
+- [x] Map-note “Become a provider” → WhatsApp directly (was `#become-provider` scroll dead-end).
+- [x] Mobile chip `min-height: 44px`.
+- [x] Diagram cache token aligned to `hero46`; privacy OG/Twitter image alts; privacy nav/footer parity (About + app link).
+- [x] Remove unused `.legend-block` CSS.
+- [x] Quiet footer app link for returners (`Already in a Zonity? Open the app`).
+
+### Still open / optional (do not block ship)
+
+- [ ] Confirm Cloudflare Pages deploy matches local `make serve` (incl. `/privacy` pretty URL via `_redirects`).
+- [x] Compress diagram — WebP (~72 KB) + JPEG fallback (~110 KB); removed 964 KB PNG from `assets/`.
+- [x] Skip-to-main link.
+- [x] `apple-touch-icon` + `theme-color`.
+- [x] Soften footer app link (`.footer-app` — quieter than Privacy).
+- [x] `robots.txt` + `sitemap.xml` + `/privacy` rewrite.
+
+### Explicitly skip
+
+- Second visual / new diagrams, FAQ/stats, app shell, tip prose expansions without product change.
 
 ---
 
@@ -110,11 +141,11 @@ Living backlog for the static gateway (`zonited.com`). Work through items in **b
 | ~~First viewport explains more than it shows~~ | Step 2 done |
 | ~~Zonity copy repeats the diagram~~ | Step 1 done — band + figcaption removed |
 | ~~Services read as tags~~ | Step 3 done — three-panel map + cues |
-| Tips not obvious on mobile | Step 4 |
+| ~~Tips not obvious on mobile~~ | Step 4 — press + once-per-session pulse + `aria-describedby` |
 | ~~Across Zonities audience jump~~ | Step 3 — “Citywide & trade” cue |
-| Few visual beats beyond one diagram | Step 7 optional |
-| Motion mostly stripped | Step 5 partly done (hero + seal) |
-| Dead CSS / assets / privacy cache skew | Step 6 |
+| ~~Few visual beats beyond one diagram~~ | Step 7 skipped — Step 3 map is enough |
+| ~~Motion mostly stripped~~ | Step 5 — hero drift + copy, seal, diagram entrance |
+| ~~Dead CSS / assets / privacy cache skew~~ | Step 6 — pruned; CF deploy spot-check still open |
 | Live app is out of scope here | Belongs on `app.zonited.com` later |
 
 ---
@@ -151,4 +182,7 @@ Living backlog for the static gateway (`zonited.com`). Work through items in **b
 | 2026-11-25 | About section: commercial/industrial board under definition (`assets/hero/commercial-board.jpg`) |
 | 2026-11-25 | Step 1: How it works copy diet — eyebrow + heading only; removed three-part Zonity band and figcaption so the diagram leads |
 | 2026-11-25 | Step 2 closed: hero composition + accepted tagline/support; Step 3: services as three accented columns with Available/Upcoming contrast and Across “Citywide & trade” cue |
+| 2026-11-25 | Steps 4–7: chip press + once-per-session hint + tip a11y; diagram transform entrance; privacy `?v=hero44`; dead path/gateway CSS removed; `assets/logo/` pruned; Step 7 deferred (Step 3 covers) |
+| 2026-11-25 | Footer app link for returners; post-1–7 hygiene pass (`hero46`): sm mark, focus/reduced-motion, WA map-note, chip tap size, heading outline |
+| 2026-11-25 | Optional pass (`hero47`): diagram WebP/JPEG, skip-link, apple-touch + theme-color, quieter footer app, robots/sitemap/`_redirects` |
 | | |

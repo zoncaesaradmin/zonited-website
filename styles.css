@@ -22,6 +22,31 @@
 
 * { box-sizing: border-box; }
 html { scroll-behavior: smooth; }
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+}
+
+.skip-link {
+  position: absolute;
+  left: 12px;
+  top: 12px;
+  z-index: 100;
+  padding: 10px 14px;
+  border-radius: 10px;
+  background: var(--brand-burgundy);
+  color: var(--brand-cream);
+  font-size: 0.9rem;
+  font-weight: 700;
+  text-decoration: none;
+  transform: translateY(-160%);
+  transition: transform 0.15s ease;
+}
+.skip-link:focus,
+.skip-link:focus-visible {
+  transform: translateY(0);
+  outline: 2px solid var(--brand-cream);
+  outline-offset: 2px;
+}
 #zonity,
 #services,
 #services-inside,
@@ -107,7 +132,15 @@ a { color: inherit; text-decoration: none; }
   color: var(--text);
   transition: color 0.2s ease;
 }
-.topnav a:hover { color: var(--brand-burgundy); }
+.topnav a:hover,
+.topnav a:focus-visible {
+  color: var(--brand-burgundy);
+  outline: none;
+}
+.topnav a:focus-visible {
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
 
 /* —— Benefit-first hero (first viewport) —— */
 .benefit-hero {
@@ -144,7 +177,6 @@ a { color: inherit; text-decoration: none; }
   transform: scale(1.02);
   /* Slow Ken Burns — presence without noise */
   animation: hero-drift 36s ease-in-out infinite alternate;
-  will-change: transform;
 }
 .benefit-hero-copy {
   position: relative;
@@ -247,7 +279,7 @@ a { color: inherit; text-decoration: none; }
   .benefit-hero-actions {
     animation: none;
   }
-  .benefit-hero-image { transform: none; will-change: auto; }
+  .benefit-hero-image { transform: none; }
 }
 
 /* —— Definition bands (Zonited / Zonity) —— */
@@ -281,13 +313,6 @@ a { color: inherit; text-decoration: none; }
   font-style: italic;
 }
 
-/* —— Gateway hero (tagline only — definition lives in platform-band) —— */
-.gateway-hero {
-  padding: 36px 8px 24px;
-  text-align: center;
-  opacity: 1;
-}
-.gateway-hero-compact { padding-top: 40px; padding-bottom: 18px; }
 .eyebrow {
   margin: 0 0 12px;
   color: var(--action-deep-sage);
@@ -306,140 +331,9 @@ h1 {
   letter-spacing: -0.03em;
   color: var(--brand-burgundy);
 }
-.hero-support {
-  max-width: 34ch;
-  margin: 14px auto 0;
-  color: var(--text-soft);
-  font-size: 1.08rem;
-  line-height: 1.55;
-}
-.mono {
-  font-family: ui-monospace, "SF Mono", Menlo, monospace;
-  font-size: 0.92em;
-  color: var(--brand-burgundy);
-}
-
-/* —— Path strip —— */
-.path-strip,
-.explore-cta-strip {
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 16px;
-  margin-top: 18px;
-}
-.path-tile {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  gap: 22px;
-  min-height: 200px;
-  padding: 26px 24px;
-  border-radius: var(--radius-xl);
-  border: 1px solid var(--surface-warm);
-  background: rgba(255, 255, 255, 0.92);
-  box-shadow: var(--shadow);
-  transition: transform 0.22s ease, box-shadow 0.22s ease;
-}
-.path-tile:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 22px 44px rgba(59, 44, 44, 0.14);
-}
-a.path-tile { color: inherit; }
-/* Join tile — brand burgundy */
-.path-tile-whatsapp {
-  background: linear-gradient(160deg, var(--brand-burgundy), #5e1530);
-  border-color: transparent;
-  color: var(--text-inverse);
-}
-/* Provider tile — brand deep sage for contrast */
-.path-tile-whatsapp-alt {
-  background: linear-gradient(160deg, var(--action-deep-sage), #35553b);
-  border-color: transparent;
-  color: var(--text-inverse);
-}
-.path-tile-muted {
-  background: rgba(255, 255, 255, 0.75);
-  opacity: 0.92;
-}
-.path-tile-muted:hover { transform: none; box-shadow: var(--shadow); }
-.path-kicker {
-  display: inline-block;
-  margin-bottom: 10px;
-  font-size: 0.68rem;
-  font-weight: 700;
-  letter-spacing: 0.14em;
-  text-transform: uppercase;
-  color: var(--action-deep-sage);
-}
-.path-tile-head h2 {
-  font-size: clamp(1.55rem, 3vw, 1.95rem);
-  line-height: 1.1;
-  color: var(--brand-burgundy);
-}
-.path-tile-head p {
-  margin: 10px 0 0;
-  color: var(--text-soft);
-  line-height: 1.55;
-  font-size: 0.98rem;
-}
-.wa-title-row {
-  display: flex;
-  align-items: flex-start;
-  gap: 12px;
-}
-.wa-title-row h2 {
-  flex: 1;
-  min-width: 0;
-}
 .wa-logo {
   display: block;
-  width: 40px;
-  height: 40px;
   flex: 0 0 auto;
-}
-.path-tile-whatsapp .path-kicker {
-  color: var(--brand-fresh-sage);
-}
-.path-tile-whatsapp .path-tile-head h2 {
-  color: var(--text-inverse);
-}
-.path-tile-whatsapp .path-tile-head p {
-  color: rgba(255, 249, 241, 0.88);
-}
-.path-tile-whatsapp-alt .path-kicker {
-  color: #c5e0cb;
-}
-.path-cta {
-  align-self: flex-start;
-  font-weight: 700;
-  color: var(--brand-burgundy);
-  font-size: 0.95rem;
-}
-.path-cta-muted { color: var(--text-soft); font-weight: 600; }
-
-.chip {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  align-self: flex-start;
-  min-height: 44px;
-  padding: 0 18px;
-  border-radius: 999px;
-  border: 1px solid transparent;
-  font-size: 0.92rem;
-  font-weight: 700;
-  transition: transform 0.18s ease, background 0.18s ease;
-}
-.chip-primary {
-  background: #ffffff;
-  color: var(--brand-burgundy);
-}
-.path-tile-whatsapp-alt .chip-primary {
-  color: var(--action-deep-sage);
-}
-.path-tile-whatsapp:hover .chip-primary {
-  background: var(--brand-cream);
-  transform: translateY(-2px);
 }
 
 /* —— Visual blocks —— */
@@ -529,15 +423,25 @@ a.path-tile { color: inherit; }
   background: rgba(255, 255, 255, 0.9);
   box-shadow: var(--shadow);
 }
+.diagram-board.is-shown {
+  /* Transform-only — no opacity/fill-mode that can hide content */
+  animation: diagram-rise 0.9s ease-out both;
+}
 .diagram-board img {
   display: block;
   width: 100%;
   height: auto;
 }
+@keyframes diagram-rise {
+  from { transform: translateY(14px) scale(0.985); }
+  to { transform: translateY(0) scale(1); }
+}
+@media (prefers-reduced-motion: reduce) {
+  .diagram-board.is-shown { animation: none; }
+}
 
 /* —— Services map —— */
-.legend,
-.legend-block {
+.legend {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -547,7 +451,6 @@ a.path-tile { color: inherit; }
   font-weight: 600;
   color: var(--text-soft);
 }
-.legend-block { margin: 0 0 8px; }
 .legend-live::before,
 .legend-soon::before {
   content: "";
@@ -604,6 +507,7 @@ a.path-tile { color: inherit; }
   cursor: pointer;
   -webkit-tap-highlight-color: transparent;
   appearance: none;
+  transition: transform 0.15s ease, box-shadow 0.15s ease, opacity 0.15s ease;
 }
 .service-chip.is-available {
   border-style: solid;
@@ -627,6 +531,25 @@ a.path-tile { color: inherit; }
   outline: none;
   opacity: 1;
   box-shadow: 0 0 0 2px rgba(73, 109, 80, 0.18);
+}
+.service-chip:active {
+  transform: scale(0.97);
+}
+@keyframes chip-hint-pulse {
+  0%, 100% {
+    box-shadow: inset 0 0 0 1px rgba(73, 109, 80, 0.08), 0 0 0 0 rgba(73, 109, 80, 0);
+  }
+  45% {
+    box-shadow: inset 0 0 0 1px rgba(73, 109, 80, 0.08), 0 0 0 5px rgba(73, 109, 80, 0.22);
+  }
+}
+.service-chip.chip-hint {
+  animation: chip-hint-pulse 1.35s ease-out 1;
+}
+@media (prefers-reduced-motion: reduce) {
+  .service-chip { transition: none; }
+  .service-chip:active { transform: none; }
+  .service-chip.chip-hint { animation: none; }
 }
 
 /* Fixed popover — positioned in JS so it stays inside the viewport */
@@ -683,7 +606,6 @@ a.path-tile { color: inherit; }
 }
 
 /* —— Services families (visual map) —— */
-.explore-page { padding-bottom: 24px; }
 .explore-family {
   --family-accent: var(--brand-burgundy);
   padding: 16px 14px 18px;
@@ -723,33 +645,15 @@ a.path-tile { color: inherit; }
   font-size: 0.68rem;
   font-weight: 700;
 }
-.family-head h2 {
+.family-head h3 {
   margin: 0;
   font-size: clamp(1.05rem, 2vw, 1.22rem);
   line-height: 1.25;
   color: var(--brand-burgundy);
 }
-.family-across .family-head h2 {
+.family-across .family-head h3 {
   color: #4a3b30;
 }
-.badge {
-  flex: 0 0 auto;
-  padding: 6px 12px;
-  border-radius: 999px;
-  font-size: 0.7rem;
-  font-weight: 700;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-}
-.badge-live {
-  background: var(--surface-sage);
-  color: var(--action-deep-sage);
-}
-.badge-soon {
-  background: rgba(59, 44, 44, 0.08);
-  color: var(--text-soft);
-}
-.explore-cta-strip { margin-top: 48px; }
 
 /* —— Footer + legal —— */
 .site-footer {
@@ -763,9 +667,31 @@ a.path-tile { color: inherit; }
   color: var(--text-soft);
   font-size: 0.9rem;
 }
+.footer-meta {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px 18px;
+}
 .site-footer a {
   color: var(--action-deep-sage);
   font-weight: 600;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+.site-footer a:focus-visible {
+  outline: 2px solid var(--action-deep-sage);
+  outline-offset: 3px;
+  border-radius: 2px;
+}
+.footer-app {
+  font-weight: 500;
+  color: var(--text-soft);
+  text-decoration: none;
+}
+.footer-app:hover,
+.footer-app:focus-visible {
+  color: var(--action-deep-sage);
   text-decoration: underline;
   text-underline-offset: 3px;
 }
@@ -804,13 +730,6 @@ a.path-tile { color: inherit; }
   color: var(--action-deep-sage);
   text-decoration: underline;
   text-underline-offset: 3px;
-}
-
-@media (max-width: 800px) {
-  .path-strip,
-  .explore-cta-strip {
-    grid-template-columns: 1fr;
-  }
 }
 
 @media (max-width: 860px) {
@@ -872,9 +791,12 @@ a.path-tile { color: inherit; }
     padding: 20px 18px;
   }
   .platform-band-lead { font-size: 1.02rem; line-height: 1.5; }
-  .gateway-hero { padding: 28px 4px 18px; }
-  .path-tile { min-height: 0; padding: 22px 18px; }
-  .service-chip { font-size: 0.9rem; }
+  .service-chip {
+    font-size: 0.9rem;
+    min-height: 44px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
   .services-map { gap: 12px; }
   .service-tip-pop { font-size: 0.88rem; }
   .legal-card { padding: 24px; }
