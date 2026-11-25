@@ -4,7 +4,7 @@ Living backlog for the static gateway (`zonited.com`). Work through items in **b
 
 **North star:** visual path to WhatsApp — clear and interesting **without** stacking more verbal explanation.
 
-**Current baseline (shipped):** Option A gateway — brand/nav → definition band → dual WhatsApp CTAs → Zonity diagram → services chips (Available / Coming) → soft “Become a provider” loop. Explore page folded into homepage. Mobile tap tooltips. `make serve` binds LAN.
+**Current baseline (shipped):** Option A gateway — brand/nav → definition band → dual WhatsApp CTAs → Zonity diagram → services chips (Available / Upcoming) → soft “Become a provider” loop. Explore page folded into homepage. Mobile tap tooltips. `make serve` binds LAN.
 
 ---
 
@@ -21,10 +21,10 @@ Living backlog for the static gateway (`zonited.com`). Work through items in **b
 
 **Goal:** Let the diagram carry the meaning; cut repeated explanation.
 
-- [ ] Keep section eyebrow + one short heading (or one short line under it).
-- [ ] Remove or collapse the three-part Zonity band (definition + follow + perk) so it does not restate the diagram.
-- [ ] Keep figcaption minimal (or drop if redundant).
-- [ ] Recheck mobile: diagram readable without scrolling through a wall of text first.
+- [x] Keep section eyebrow + one short heading (or one short line under it).
+- [x] Remove or collapse the three-part Zonity band (definition + follow + perk) so it does not restate the diagram.
+- [x] Keep figcaption minimal (or drop if redundant).
+- [x] Recheck mobile: diagram readable without scrolling through a wall of text first.
 
 **Why first:** Highest clarity win, lowest risk to CTAs and services.
 
@@ -35,11 +35,11 @@ Living backlog for the static gateway (`zonited.com`). Work through items in **b
 **Goal:** First screen feels like one branded composition, not a definition essay + two cards of copy.
 
 - [x] Increase brand presence above the fold (wordmark in benefit hero).
-- [x] Atmosphere: hero board `assets/hero/neighborhood-board.jpg` + HTML headline/support (editable) + light CSS float/drift.
+- [x] Atmosphere: hero board `assets/hero/neighborhood-board.jpg` + HTML headline/support (editable) + light CSS drift + copy entrance.
 - [x] Primary actions as compact WhatsApp CTAs in the hero (Join / Become a provider) — heavy path tiles removed from first viewport.
 - [x] Brand test improved: wordmark + benefit line + visual without opening on a definition band.
-- [ ] Iterate tagline/support copy until it feels right (working draft in hero).
-- [ ] Avoid stacking stats, promos, or secondary marketing in the first viewport (keep watching).
+- [x] Iterate tagline/support copy until it feels right (accepted: hero + meta share the same support line).
+- [x] Avoid stacking stats, promos, or secondary marketing in the first viewport (keep watching).
 
 **Constraints:** Soft WhatsApp interest only; no fake app UI.
 
@@ -49,11 +49,11 @@ Living backlog for the static gateway (`zonited.com`). Work through items in **b
 
 **Goal:** Services read as a map of three worlds, not a tag cloud.
 
-- [ ] Stronger visual grouping for the three families (Within / Outside / Across) — quiet columns, rules, or accent — without restoring long family leads.
-- [ ] Push Available vs Coming contrast (fill, weight, opacity); legend stays short.
-- [ ] Optional: tiny pictogram or color cue per family (still scannable as chips).
-- [ ] Review “Across Zonities” vs resident-facing chips — signal audience shift visually if the list stays B2B-leaning.
-- [ ] Revisit chip labels/tooltips only when a concrete product decision lands (do not expand tip prose for its own sake).
+- [x] Stronger visual grouping for the three families (Within / Outside / Across) — quiet columns, rules, or accent — without restoring long family leads.
+- [x] Push Available vs Upcoming contrast (fill, weight, opacity); legend stays short.
+- [x] Optional: tiny pictogram or color cue per family (still scannable as chips).
+- [x] Review “Across Zonities” vs resident-facing chips — signal audience shift visually if the list stays B2B-leaning.
+- [x] Revisit chip labels/tooltips only when a concrete product decision lands (do not expand tip prose for its own sake).
 
 ---
 
@@ -107,13 +107,13 @@ Living backlog for the static gateway (`zonited.com`). Work through items in **b
 
 | Gap | Notes |
 |---|---|
-| First viewport explains more than it shows | Step 2 |
-| Zonity copy repeats the diagram | Step 1 |
-| Services read as tags | Step 3 |
+| ~~First viewport explains more than it shows~~ | Step 2 done |
+| ~~Zonity copy repeats the diagram~~ | Step 1 done — band + figcaption removed |
+| ~~Services read as tags~~ | Step 3 done — three-panel map + cues |
 | Tips not obvious on mobile | Step 4 |
-| Across Zonities audience jump | Step 3 |
-| Few visual beats beyond one diagram | Steps 2, 7 |
-| Motion mostly stripped | Step 5 |
+| ~~Across Zonities audience jump~~ | Step 3 — “Citywide & trade” cue |
+| Few visual beats beyond one diagram | Step 7 optional |
+| Motion mostly stripped | Step 5 partly done (hero + seal) |
 | Dead CSS / assets / privacy cache skew | Step 6 |
 | Live app is out of scope here | Belongs on `app.zonited.com` later |
 
@@ -149,4 +149,6 @@ Living backlog for the static gateway (`zonited.com`). Work through items in **b
 | 2026-11-25 | Moved “What is Zonited?” platform copy to `#about` before footer; About nav link |
 | 2026-11-25 | Benefit hero finalized: `assets/hero/neighborhood-board.jpg` (painterly colony + apartments; iteration options folder removed) |
 | 2026-11-25 | About section: commercial/industrial board under definition (`assets/hero/commercial-board.jpg`) |
+| 2026-11-25 | Step 1: How it works copy diet — eyebrow + heading only; removed three-part Zonity band and figcaption so the diagram leads |
+| 2026-11-25 | Step 2 closed: hero composition + accepted tagline/support; Step 3: services as three accented columns with Available/Upcoming contrast and Across “Citywide & trade” cue |
 | | |

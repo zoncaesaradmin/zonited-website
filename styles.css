@@ -57,13 +57,14 @@ a { color: inherit; text-decoration: none; }
 .page-shell {
   width: min(1040px, calc(100% - 28px));
   margin: 0 auto;
-  padding: 20px 0 48px;
+  padding: 20px 0 28px;
 }
 .page-shell-top {
   padding-bottom: 12px;
 }
 .page-shell-foot {
   padding-top: 0;
+  padding-bottom: 20px;
 }
 
 /* —— Topbar —— */
@@ -141,41 +142,9 @@ a { color: inherit; text-decoration: none; }
   /* Prefer left: shop + people stay in frame; crop spare houses on the right */
   object-position: left center;
   transform: scale(1.02);
-  animation: hero-drift 22s ease-in-out infinite alternate;
-}
-/* Optional soft dots — kept tiny on desktop; hidden on small screens
-   (hero JPEG already has service badges; large floats looked odd on mobile). */
-.benefit-float {
-  position: absolute;
-  border-radius: 999px;
-  pointer-events: none;
-  filter: blur(0.2px);
-  opacity: 0.45;
-  animation: float-soft 7s ease-in-out infinite;
-}
-.benefit-float-a {
-  width: 14px;
-  height: 14px;
-  left: 8%;
-  top: 12%;
-  background: color-mix(in srgb, var(--brand-fresh-sage) 70%, white);
-  animation-delay: 0s;
-}
-.benefit-float-b {
-  width: 10px;
-  height: 10px;
-  right: 10%;
-  top: 22%;
-  background: color-mix(in srgb, var(--brand-burgundy) 55%, white);
-  animation-delay: -2.4s;
-}
-.benefit-float-c {
-  width: 8px;
-  height: 8px;
-  left: 22%;
-  top: 30%;
-  background: color-mix(in srgb, var(--brand-cream) 80%, var(--brand-fresh-sage));
-  animation-delay: -4.2s;
+  /* Slow Ken Burns — presence without noise */
+  animation: hero-drift 36s ease-in-out infinite alternate;
+  will-change: transform;
 }
 .benefit-hero-copy {
   position: relative;
@@ -188,10 +157,17 @@ a { color: inherit; text-decoration: none; }
   background:
     linear-gradient(160deg, rgba(255, 249, 241, 0.97) 0%, rgba(231, 240, 229, 0.94) 100%);
 }
+.benefit-hero-wordmark,
+.benefit-hero-copy h1,
+.benefit-hero-support,
+.benefit-hero-actions {
+  animation: hero-copy-rise 0.85s ease-out both;
+}
 .benefit-hero-wordmark {
   display: block;
   width: min(220px, 70%);
   height: auto;
+  animation-delay: 0.08s;
 }
 .benefit-hero-copy h1 {
   max-width: 14ch;
@@ -200,6 +176,7 @@ a { color: inherit; text-decoration: none; }
   letter-spacing: -0.03em;
   color: var(--brand-burgundy);
   text-wrap: balance;
+  animation-delay: 0.18s;
 }
 .benefit-hero-support {
   margin: 0;
@@ -208,12 +185,14 @@ a { color: inherit; text-decoration: none; }
   font-size: clamp(0.98rem, 1.6vw, 1.12rem);
   line-height: 1.5;
   text-wrap: pretty;
+  animation-delay: 0.28s;
 }
 .benefit-hero-actions {
   display: flex;
   flex-wrap: wrap;
   gap: 10px;
   margin-top: 6px;
+  animation-delay: 0.38s;
 }
 .hero-cta {
   display: inline-flex;
@@ -245,21 +224,30 @@ a { color: inherit; text-decoration: none; }
 }
 
 @keyframes hero-drift {
-  /* Drift only upward/right slightly so the left (shop) is not panned away */
+  /* Gentle drift — keep shop/people on the left in frame */
   from { transform: scale(1.02) translate3d(0, 0, 0); }
-  to { transform: scale(1.045) translate3d(1%, -0.6%, 0); }
+  to { transform: scale(1.035) translate3d(0.6%, -0.35%, 0); }
 }
-@keyframes float-soft {
-  0%, 100% { transform: translate3d(0, 0, 0); opacity: 0.55; }
-  50% { transform: translate3d(0, -10px, 0); opacity: 0.85; }
+@keyframes hero-copy-rise {
+  from {
+    opacity: 0;
+    transform: translate3d(0, 14px, 0);
+  }
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
 }
 
 @media (prefers-reduced-motion: reduce) {
   .benefit-hero-image,
-  .benefit-float {
+  .benefit-hero-wordmark,
+  .benefit-hero-copy h1,
+  .benefit-hero-support,
+  .benefit-hero-actions {
     animation: none;
   }
-  .benefit-hero-image { transform: none; }
+  .benefit-hero-image { transform: none; will-change: auto; }
 }
 
 /* —— Definition bands (Zonited / Zonity) —— */
@@ -273,13 +261,6 @@ a { color: inherit; text-decoration: none; }
   box-shadow: var(--shadow);
 }
 .platform-band:first-of-type { margin-top: 22px; }
-.zonity-band {
-  margin-top: 22px;
-  margin-bottom: 18px;
-  border-color: rgba(127, 29, 61, 0.18);
-  background:
-    linear-gradient(125deg, rgba(127, 29, 61, 0.06) 0%, var(--brand-cream) 52%, var(--surface-sage) 100%);
-}
 .platform-band-lead {
   margin: 0 auto;
   max-width: 42rem;
@@ -291,9 +272,6 @@ a { color: inherit; text-decoration: none; }
   font-weight: 400;
   text-wrap: pretty;
 }
-.platform-band-lead-follow {
-  margin-top: 0.55em;
-}
 .platform-band-lead strong,
 .platform-band-lead em {
   font-weight: 700;
@@ -301,15 +279,6 @@ a { color: inherit; text-decoration: none; }
 }
 .platform-band-lead em {
   font-style: italic;
-}
-.platform-band-perk {
-  margin: 14px auto 0;
-  max-width: 36rem;
-  text-align: center;
-  color: var(--action-deep-sage);
-  font-size: clamp(0.95rem, 1.8vw, 1.08rem);
-  font-weight: 700;
-  line-height: 1.45;
 }
 
 /* —— Gateway hero (tagline only — definition lives in platform-band) —— */
@@ -476,12 +445,15 @@ a.path-tile { color: inherit; }
 /* —— Visual blocks —— */
 .visual-block { padding: 56px 0 0; }
 .page-shell > .visual-block:first-child { padding-top: 36px; }
-.about-block { padding-bottom: 28px; }
+.about-block { padding-bottom: 8px; }
 .about-band {
   margin-top: 0;
   max-width: 42rem;
   margin-left: auto;
   margin-right: auto;
+}
+.about-band-follow {
+  margin-top: 0.65em;
 }
 .about-visual {
   margin: 22px 0 0;
@@ -509,8 +481,8 @@ a.path-tile { color: inherit; }
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 18px;
-  margin: 48px auto 12px;
+  gap: 14px;
+  margin: 36px auto 0;
   max-width: 28rem;
   text-align: center;
 }
@@ -550,7 +522,7 @@ a.path-tile { color: inherit; }
 }
 
 .diagram-board {
-  margin: 0;
+  margin: 8px 0 0;
   overflow: hidden;
   border-radius: var(--radius-xl);
   border: 1px solid var(--surface-warm);
@@ -561,13 +533,6 @@ a.path-tile { color: inherit; }
   display: block;
   width: 100%;
   height: auto;
-}
-.diagram-board figcaption {
-  padding: 12px 18px 16px;
-  border-top: 1px solid var(--line);
-  color: var(--text-soft);
-  font-size: 0.92rem;
-  text-align: center;
 }
 
 /* —— Services map —— */
@@ -594,7 +559,24 @@ a.path-tile { color: inherit; }
   vertical-align: middle;
 }
 .legend-live::before { background: var(--action-deep-sage); }
-.legend-soon::before { background: rgba(59, 44, 44, 0.28); }
+.legend-soon::before {
+  background: transparent;
+  border: 1.5px dashed rgba(59, 44, 44, 0.35);
+  box-sizing: border-box;
+}
+
+.services-map {
+  display: grid;
+  gap: 16px;
+  margin-top: 28px;
+}
+@media (min-width: 900px) {
+  .services-map {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 14px;
+    align-items: stretch;
+  }
+}
 
 .service-chip-list {
   display: flex;
@@ -624,20 +606,26 @@ a.path-tile { color: inherit; }
   appearance: none;
 }
 .service-chip.is-available {
-  border-color: rgba(73, 109, 80, 0.4);
-  background: var(--surface-sage);
+  border-style: solid;
+  border-color: rgba(73, 109, 80, 0.55);
+  background: color-mix(in srgb, var(--surface-sage) 88%, white);
   color: var(--action-deep-sage);
+  font-weight: 700;
+  box-shadow: inset 0 0 0 1px rgba(73, 109, 80, 0.08);
 }
 .service-chip.is-coming {
   border-style: dashed;
-  border-color: rgba(59, 44, 44, 0.2);
-  background: rgba(255, 255, 255, 0.72);
-  color: #7a6a6a;
+  border-color: rgba(59, 44, 44, 0.18);
+  background: rgba(255, 255, 255, 0.55);
+  color: rgba(95, 77, 77, 0.72);
+  font-weight: 500;
+  opacity: 0.78;
 }
 .service-chip:hover,
 .service-chip:focus-visible,
 .service-chip.is-open {
   outline: none;
+  opacity: 1;
   box-shadow: 0 0 0 2px rgba(73, 109, 80, 0.18);
 }
 
@@ -694,19 +682,55 @@ a.path-tile { color: inherit; }
   color: var(--deep-sage, #496d50);
 }
 
-/* —— Explore page —— */
+/* —— Services families (visual map) —— */
 .explore-page { padding-bottom: 24px; }
-.explore-family { padding-top: 36px; }
+.explore-family {
+  --family-accent: var(--brand-burgundy);
+  padding: 16px 14px 18px;
+  border-radius: var(--radius-lg);
+  border: 1px solid color-mix(in srgb, var(--family-accent) 18%, var(--surface-warm));
+  border-top: 3px solid var(--family-accent);
+  background:
+    linear-gradient(
+      165deg,
+      color-mix(in srgb, var(--family-accent) 6%, white) 0%,
+      rgba(255, 249, 241, 0.92) 100%
+    );
+}
+.family-within { --family-accent: var(--brand-burgundy); }
+.family-outside { --family-accent: var(--action-deep-sage); }
+.family-across {
+  --family-accent: #5c4a3a;
+  background:
+    linear-gradient(
+      165deg,
+      rgba(92, 74, 58, 0.07) 0%,
+      rgba(255, 249, 241, 0.95) 100%
+    );
+}
 .family-head {
   display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 12px;
-  margin-bottom: 12px;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 4px;
+  margin-bottom: 14px;
+}
+.family-cue {
+  margin: 0;
+  color: color-mix(in srgb, var(--family-accent) 85%, var(--text-soft));
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  font-size: 0.68rem;
+  font-weight: 700;
 }
 .family-head h2 {
-  font-size: 1.35rem;
+  margin: 0;
+  font-size: clamp(1.05rem, 2vw, 1.22rem);
+  line-height: 1.25;
   color: var(--brand-burgundy);
+}
+.family-across .family-head h2 {
+  color: #4a3b30;
 }
 .badge {
   flex: 0 0 auto;
@@ -734,7 +758,7 @@ a.path-tile { color: inherit; }
   align-items: center;
   justify-content: space-between;
   gap: 12px;
-  margin-top: 48px;
+  margin-top: 28px;
   padding: 8px 4px 0;
   color: var(--text-soft);
   font-size: 0.9rem;
@@ -822,7 +846,6 @@ a.path-tile { color: inherit; }
   .benefit-hero-image {
     object-position: left 40%;
   }
-  .benefit-float { display: none; }
   .benefit-hero-copy {
     padding: 22px 18px 24px;
   }
@@ -839,7 +862,10 @@ a.path-tile { color: inherit; }
 }
 
 @media (max-width: 560px) {
-  .page-shell { width: min(100% - 18px, 1040px); padding-top: 12px; }
+  .page-shell { width: min(100% - 18px, 1040px); padding-top: 12px; padding-bottom: 16px; }
+  .page-shell-foot { padding-bottom: 14px; }
+  .about-seal { margin-top: 28px; gap: 12px; }
+  .site-footer { margin-top: 18px; }
   .benefit-hero { width: min(100% - 12px, 1120px); }
   .platform-band {
     margin-top: 14px;
@@ -848,8 +874,8 @@ a.path-tile { color: inherit; }
   .platform-band-lead { font-size: 1.02rem; line-height: 1.5; }
   .gateway-hero { padding: 28px 4px 18px; }
   .path-tile { min-height: 0; padding: 22px 18px; }
-  .family-head { align-items: flex-start; flex-direction: column; }
   .service-chip { font-size: 0.9rem; }
+  .services-map { gap: 12px; }
   .service-tip-pop { font-size: 0.88rem; }
   .legal-card { padding: 24px; }
   .site-footer { flex-direction: column; align-items: flex-start; }
