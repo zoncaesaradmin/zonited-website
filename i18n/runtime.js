@@ -6,8 +6,6 @@
   var I = global.ZonitedI18n;
   if (!I || !I.STRINGS) return;
 
-  var MOBILE_MQ = "(max-width: 860px)";
-
   function t(key, lang) {
     var entry = I.STRINGS[key];
     if (!entry) return "";
@@ -30,17 +28,45 @@
     } catch (e) { /* ignore */ }
   }
 
-  function isMobile() {
-    return window.matchMedia(MOBILE_MQ).matches;
+  function localeByCode(code) {
+    for (var i = 0; i < I.LOCALES.length; i++) {
+      if (I.LOCALES[i].code === code) return I.LOCALES[i];
+    }
+    return I.LOCALES[0];
   }
 
-  function syncSelectLabels(select) {
-    if (!select) return;
-    var useShort = isMobile();
-    I.LOCALES.forEach(function (locale) {
-      var opt = select.querySelector('option[value="' + locale.code + '"]');
-      if (opt) opt.textContent = useShort ? locale.short : locale.label;
+  function syncLangControl(lang) {
+    var current = document.getElementById("lang-current");
+    var menu = document.getElementById("lang-menu");
+    var locale = localeByCode(lang);
+    if (current) current.textContent = locale.short;
+    if (!menu) return;
+    menu.querySelectorAll("[role='option']").forEach(function (opt) {
+      var selected = opt.getAttribute("data-lang") === lang;
+      opt.setAttribute("aria-selected", selected ? "true" : "false");
+      opt.classList.toggle("is-selected", selected);
     });
+  }
+
+  function closeLangMenu() {
+    var toggle = document.getElementById("lang-toggle");
+    var menu = document.getElementById("lang-menu");
+    if (menu) menu.hidden = true;
+    if (toggle) toggle.setAttribute("aria-expanded", "false");
+  }
+
+  function openLangMenu() {
+    var toggle = document.getElementById("lang-toggle");
+    var menu = document.getElementById("lang-menu");
+    if (menu) menu.hidden = false;
+    if (toggle) toggle.setAttribute("aria-expanded", "true");
+  }
+
+  function toggleLangMenu() {
+    var menu = document.getElementById("lang-menu");
+    if (!menu) return;
+    if (menu.hidden) openLangMenu();
+    else closeLangMenu();
   }
 
   function apply(lang) {
@@ -96,11 +122,8 @@
       el.setAttribute("href", I.WA_PREFIX + encodeURIComponent(prefill));
     });
 
-    var select = document.getElementById("lang-select");
-    if (select) {
-      select.value = lang;
-      syncSelectLabels(select);
-    }
+    syncLangControl(lang);
+    closeLangMenu();
 
     // Refresh open service tip if present
     var liveTip = document.getElementById("service-tip-live");
@@ -117,27 +140,42 @@
     apply(lang);
   }
 
-  function initSelect(select) {
-    if (!select) return;
-    select.innerHTML = "";
+  function initLangSwitch() {
+    var toggle = document.getElementById("lang-toggle");
+    var menu = document.getElementById("lang-menu");
+    if (!toggle || !menu) return;
+
+    menu.innerHTML = "";
     I.LOCALES.forEach(function (locale) {
-      var opt = document.createElement("option");
-      opt.value = locale.code;
-      opt.textContent = isMobile() ? locale.short : locale.label;
-      select.appendChild(opt);
+      var opt = document.createElement("li");
+      opt.setAttribute("role", "option");
+      opt.setAttribute("data-lang", locale.code);
+      opt.setAttribute("tabindex", "-1");
+      opt.textContent = locale.label;
+      opt.addEventListener("click", function () {
+        setLang(locale.code);
+      });
+      menu.appendChild(opt);
     });
-    select.value = getLang();
-    select.addEventListener("change", function () {
-      setLang(select.value);
+
+    toggle.addEventListener("click", function (e) {
+      e.stopPropagation();
+      toggleLangMenu();
     });
-    window.matchMedia(MOBILE_MQ).addEventListener("change", function () {
-      syncSelectLabels(select);
+
+    document.addEventListener("click", function (e) {
+      if (!menu.hidden && !menu.contains(e.target) && e.target !== toggle) {
+        closeLangMenu();
+      }
+    });
+
+    document.addEventListener("keydown", function (e) {
+      if (e.key === "Escape") closeLangMenu();
     });
   }
 
   function init() {
-    var select = document.getElementById("lang-select");
-    initSelect(select);
+    initLangSwitch();
     apply(getLang());
   }
 

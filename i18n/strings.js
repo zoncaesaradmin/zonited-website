@@ -14,10 +14,11 @@
   global.ZonitedI18n.WA_PREFIX = WA;
 
   // Order by language code (en, kn, te) — stable, neutral default for the select.
+  // short = closed topbar chip (native script / 3-unit form); label = open menu name
   global.ZonitedI18n.LOCALES = [
-    { code: "en", label: "English", short: "EN" },
-    { code: "kn", label: "ಕನ್ನಡ", short: "KN" },
-    { code: "te", label: "తెలుగు", short: "TE" },
+    { code: "en", label: "English", short: "ENG" },
+    { code: "kn", label: "ಕನ್ನಡ", short: "ಕನ್ನಡ" },
+    { code: "te", label: "తెలుగు", short: "తెలుగు" },
   ];
 
   global.ZonitedI18n.STRINGS = {
