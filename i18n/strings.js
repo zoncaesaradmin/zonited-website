@@ -1,6 +1,7 @@
 /**
  * Homepage copy — English, Telugu, Kannada side by side.
- * Telugu: Zonity → జోనిటి. Zonited stays Latin in titles/logo/headings; జొనైటెడ్ in body copy.
+ * Brand script: Zonity → జోనిటి / ಜೋನಿಟಿ; Zonited Latin on titles/logo/headings,
+ * జొనైటెడ్ / ಜೊನೈಟೆಡ್ in body copy. Kannada kn: follows Telugu wording where parallel.
  * Experts: edit only the te: / kn: values (natural wording, not literal translation).
  * Add a language later: new field on each key + a LOCALES row.
  */
@@ -23,28 +24,28 @@
     "meta.title": {
       en: "Zonited | Everything you need, around you",
       te: "Zonited | మీకు కావాల్సినవన్నీ మీ దగ్గరకే",
-      kn: "Zonited | ನಿಮ್ಮ ಸುತ್ತಲೂ ಬೇಕಾದದ್ದೆಲ್ಲ",
+      kn: "Zonited | ನಿಮಗೆ ಬೇಕಾದದ್ದೆಲ್ಲ ನಿಮ್ಮ ಹತ್ತಿರಕ್ಕೇ",
     },
     "meta.description": {
       en: "Simplify neighborhood life — local services and shared workflows, in one community.",
       te: "మీరున్న చోటికే మీకు కావాల్సిన services అన్నీ సులువుగా, దగ్గరగా.",
-      kn: "ಸ್ಥಳೀಯ ಸೇವೆಗಳು ಮತ್ತು ಹಂಚಿದ ಕೆಲಸಗಳು — ಒಂದೇ ಸಮುದಾಯದಲ್ಲಿ ನೆರೆಹೊರೆಯ ಜೀವನವನ್ನು ಸರಳಗೊಳಿಸಿ.",
+      kn: "ನೀವಿರುವ ಜಾಗಕ್ಕೇ ನಿಮಗೆ ಬೇಕಾದ services ಎಲ್ಲಾ ಸುಲಭವಾಗಿ, ಹತ್ತಿರದಲ್ಲಿ.",
     },
     "meta.ogImageAlt": {
       en: "Zonited — everything you need, around you",
       te: "Zonited — మీకు కావాల్సినవన్నీ మీ దగ్గరకే",
-      kn: "Zonited — ನಿಮ್ಮ ಸುತ್ತಲೂ ಬೇಕಾದದ್ದೆಲ್ಲ",
+      kn: "Zonited — ನಿಮಗೆ ಬೇಕಾದದ್ದೆಲ್ಲ ನಿಮ್ಮ ಹತ್ತಿರಕ್ಕೇ",
     },
 
     "a11y.skip": {
       en: "Skip to content",
       te: "ముఖ్య విషయానికి వెళ్లండి",
-      kn: "ವಿಷಯಕ್ಕೆ ಹೋಗಿ",
+      kn: "ಮುಖ್ಯ ವಿಷಯಕ್ಕೆ ಹೋಗಿ",
     },
     "a11y.brandHome": {
       en: "Zonited home",
       te: "Zonited హోమ్",
-      kn: "Zonited ಮುಖಪುಟ",
+      kn: "Zonited ಹೋಮ್",
     },
     "a11y.primaryNav": {
       en: "Primary",
@@ -59,7 +60,7 @@
     "a11y.aboutBand": {
       en: "What Zonited and a Zonity are",
       te: "Zonited మరియు జోనిటి అంటే ఏమిటి?",
-      kn: "Zonited ಮತ್ತು Zonity ಎಂದರೇನು",
+      kn: "Zonited ಮತ್ತು ಜೋನಿಟಿ ಎಂದರೇನು?",
     },
     "a11y.footerNav": { en: "Site", te: "సైట్", kn: "ಸೈಟ್" },
     "a11y.lang": { en: "Language", te: "భాష", kn: "ಭಾಷೆ" },
@@ -80,17 +81,17 @@
     "hero.support": {
       en: "Simplify neighborhood life — local services and shared workflows, in one community.",
       te: "మీరున్న చోటికే మీకు కావాల్సిన services అన్నీ సులువుగా, దగ్గరగా.",
-      kn: "ನೆರೆಹೊರೆಯ ಜೀವನವನ್ನು ಸರಳಗೊಳಿಸಿ — ಸ್ಥಳೀಯ ಸೇವೆಗಳು, ಹಂಚಿದ ಕೆಲಸಗಳು, ಒಂದೇ ಸಮುದಾಯದಲ್ಲಿ.",
+      kn: "ನೀವಿರುವ ಜಾಗಕ್ಕೇ ನಿಮಗೆ ಬೇಕಾದ services ಎಲ್ಲಾ ಸುಲಭವಾಗಿ, ಹತ್ತಿರದಲ್ಲಿ.",
     },
     "cta.join.label": {
       en: "Join a Zonity",
       te: "జోనిటిలో చేరండి",
-      kn: "Zonityಗೆ ಸೇರಿ",
+      kn: "ಜೋನಿಟಿಯಲ್ಲಿ ಸೇರಿ",
     },
     "cta.join.prefill": {
       en: "Hi, I would like to learn more about joining a Zonity.",
       te: "హాయ్, నేను జోనిటిలో చేరడం గురించి మరింత తెలుసుకోవాలనుకుంటున్నాను.",
-      kn: "ಹಾಯ್, ನಾನು Zonityಗೆ ಸೇರುವ ಬಗ್ಗೆ ಇನ್ನಷ್ಟು ತಿಳಿದುಕೊಳ್ಳಲು ಬಯಸುತ್ತೇನೆ.",
+      kn: "ಹಾಯ್, ನಾನು ಜೋನಿಟಿಯಲ್ಲಿ ಸೇರುವ ಬಗ್ಗೆ ಇನ್ನಷ್ಟು ತಿಳಿದುಕೊಳ್ಳಲು ಬಯಸುತ್ತೇನೆ.",
     },
     "cta.provider.label": {
       en: "Become a provider",
@@ -100,23 +101,23 @@
     "cta.provider.prefill": {
       en: "Hi, I would like to register interest as a partner / operator / vendor for Zonity.",
       te: "హాయ్, నేను జోనిటికి భాగస్వామి / ఆపరేటర్ / విక్రేతగా ఆసక్తి నమోదు చేయాలనుకుంటున్నాను.",
-      kn: "ಹಾಯ್, ನಾನು Zonityಗೆ ಪಾಲುದಾರ / ಆಪರೇಟರ್ / ಮಾರಾಟಗಾರರಾಗಿ ಆಸಕ್ತಿ ನೋಂದಾಯಿಸಲು ಬಯಸುತ್ತೇನೆ.",
+      kn: "ಹಾಯ್, ನಾನು ಜೋನಿಟಿಗೆ ಪಾಲುದಾರ / ಆಪರೇಟರ್ / ಮಾರಾಟಗಾರರಾಗಿ ಆಸಕ್ತಿ ನೋಂದಾಯಿಸಲು ಬಯಸುತ್ತೇನೆ.",
     },
 
     "zonity.eyebrow": {
       en: "What is a Zonity",
       te: "జోనిటి అంటే ఏమిటి?",
-      kn: "Zonity ಎಂದರೇನು",
+      kn: "ಜೋನಿಟಿ ಎಂದರೇನು?",
     },
     "zonity.heading": {
       en: "Your neighborhood zone, connected",
       te: "మీరున్న చోటు, ఒకటిగా కలిసి",
-      kn: "ನಿಮ್ಮ ನೆರೆಹೊರೆ ವಲಯ, ಸಂಪರ್ಕಿತ",
+      kn: "ನೀವಿರುವ ಜಾಗ, ಒಂದಾಗಿ ಕೂಡಿ",
     },
     "zonity.diagramAlt": {
       en: "Zonity diagram: a local colony map connecting residents, shops, and services around a shared place",
       te: "జోనిటి diagram: నివసిస్తున్నవారు, దుకాణాలు, సేవలను ఒకే స్థలంలో అన్నింటినీ కలిపే స్థానిక మ్యాప్.",
-      kn: "Zonity ರೇಖಾಚಿತ್ರ: ನಿವಾಸಿಗಳು, ಅಂಗಡಿಗಳು ಮತ್ತು ಸೇವೆಗಳನ್ನು ಒಂದೇ ಸ್ಥಳದ ಸುತ್ತಲೂ ಕೊಂಡಿಸುವ ಸ್ಥಳೀಯ ಕಾಲೋನಿ ನಕ್ಷೆ",
+      kn: "ಜೋನಿಟಿ diagram: ವಾಸಿಸುವವರು, ಅಂಗಡಿಗಳು, ಸೇವೆಗಳನ್ನು ಒಂದೇ ಸ್ಥಳದಲ್ಲಿ ಎಲ್ಲವನ್ನೂ ಕೊಂಡಿಸುವ ಸ್ಥಳೀಯ ಮ್ಯಾಪ್.",
     },
 
     "services.eyebrow": { en: "Services", te: "సేవలు", kn: "ಸೇವೆಗಳು" },
@@ -128,7 +129,7 @@
     "services.legendLive": {
       en: "Available",
       te: "అందుబాటులో",
-      kn: "ಲಭ್ಯ",
+      kn: "ಲಭ್ಯವಿದೆ",
     },
     "services.legendSoon": {
       en: "Upcoming",
@@ -140,38 +141,38 @@
     "services.inside.heading": {
       en: "Within your Zonity",
       te: "మీ జోనిటి లోపల",
-      kn: "ನಿಮ್ಮ Zonity ಒಳಗೆ",
+      kn: "ನಿಮ್ಮ ಜೋನಿಟಿ ಒಳಗೆ",
     },
     "services.outside.cue": {
       en: "Into your zone",
       te: "మీ జోన్‌లోకి",
-      kn: "ನಿಮ್ಮ ವಲಯಕ್ಕೆ",
+      kn: "ನಿಮ್ಮ ಜೋನ್‌ ಒಳಕ್ಕೆ",
     },
     "services.outside.heading": {
       en: "From providers outside your Zonity",
       te: "మీ జోనిటి బయటి ప్రొవైడర్ల నుండి",
-      kn: "ನಿಮ್ಮ Zonity ಹೊರಗಿನ ಪ್ರೊವೈಡರ್‌ಗಳಿಂದ",
+      kn: "ನಿಮ್ಮ ಜೋನಿಟಿ ಹೊರಗಿನ ಪ್ರೊವೈಡರ್‌ಗಳಿಂದ",
     },
     "services.across.cue": {
       en: "Citywide & trade",
       te: "నగరం & వ్యాపారం",
-      kn: "ನಗರವ್ಯಾಪಿ & ವ್ಯಾಪಾರ",
+      kn: "ನಗರ & ವ್ಯಾಪಾರ",
     },
     "services.across.heading": {
       en: "Across Zonities on the platform",
       te: "ప్లాట్‌ఫారమ్‌లో జోనిటిల మధ్య",
-      kn: "ಪ್ಲಾಟ್‌ಫಾರ್ಮ್‌ನಲ್ಲಿ Zonityಗಳ ನಡುವೆ",
+      kn: "ಪ್ಲಾಟ್‌ಫಾರ್ಮ್‌ನಲ್ಲಿ ಜೋನಿಟಿಗಳ ನಡುವೆ",
     },
 
     "services.rentals.label": {
       en: "Rentals in your Zonity",
       te: "మీ జోనిటిలో అద్దెలు",
-      kn: "ನಿಮ್ಮ Zonityಯಲ್ಲಿ ಬಾಡಿಗೆ",
+      kn: "ನಿಮ್ಮ ಜೋನಿಟಿಯಲ್ಲಿ ಬಾಡಿಗೆಗಳು",
     },
     "services.rentals.tip": {
       en: "List or find homes or shops to rent within your Zonity. Optionally make the listing visible across other Zonities.",
       te: "మీ జోనిటిలో అద్దెకు ఇళ్లు లేదా దుకాణాలు జాబితా చేయండి లేదా కనుగొనండి. కావాలంటే ఇతర జోనిటిలకు కూడా కనిపించేలా చేయండి.",
-      kn: "ನಿಮ್ಮ Zonityಯಲ್ಲಿ ಬಾಡಿಗೆಗೆ ಮನೆಗಳು ಅಥವಾ ಅಂಗಡಿಗಳನ್ನು ಪಟ್ಟಿ ಮಾಡಿ ಅಥವಾ ಹುಡುಕಿ. ಬೇಕಾದರೆ ಇತರ Zonityಗಳಿಗೂ ಕಾಣುವಂತೆ ಮಾಡಿ.",
+      kn: "ನಿಮ್ಮ ಜೋನಿಟಿಯಲ್ಲಿ ಬಾಡಿಗೆಗೆ ಮನೆಗಳು ಅಥವಾ ಅಂಗಡಿಗಳನ್ನು ಪಟ್ಟಿ ಮಾಡಿ ಅಥವಾ ಹುಡುಕಿ. ಬೇಕಾದರೆ ಇತರ ಜೋನಿಟಿಗಳಿಗೂ ಕಾಣುವಂತೆ ಮಾಡಿ.",
     },
     "services.fund.label": {
       en: "Fund collection",
@@ -181,7 +182,7 @@
     "services.fund.tip": {
       en: "Pool money with neighbors for shared needs — festivals, repairs, gifts, or community projects — with clear tracking inside your Zonity.",
       te: "పండుగలు, మరమ్మతులు, బహుమతులు లేదా సమూహ ప్రాజెక్టుల కోసం పొరుగువారితో డబ్బు కలపండి — మీ జోనిటిలో స్పష్టమైన ట్రాకింగ్‌తో.",
-      kn: "ಹಬ್ಬಗಳು, ದುರಸ್ತಿ, ಉಡುಗೊರೆಗಳು ಅಥವಾ ಸಮುದಾಯ ಯೋಜನೆಗಳಿಗೆ ನೆರೆಹೊರೆಯವರೊಂದಿಗೆ ಹಣ ಸಂಗ್ರಹಿಸಿ — ನಿಮ್ಮ Zonityಯಲ್ಲಿ ಸ್ಪಷ್ಟ ಟ್ರ್ಯಾಕಿಂಗ್‌ನೊಂದಿಗೆ.",
+      kn: "ಹಬ್ಬಗಳು, ದುರಸ್ತಿ, ಉಡುಗೊರೆಗಳು ಅಥವಾ ಸಮುದಾಯ ಯೋಜನೆಗಳಿಗೆ ನೆರೆಹೊರೆಯವರೊಂದಿಗೆ ಹಣ ಕೂಡಿಸಿ — ನಿಮ್ಮ ಜೋನಿಟಿಯಲ್ಲಿ ಸ್ಪಷ್ಟ ಟ್ರ್ಯಾಕಿಂಗ್‌ನೊಂದಿಗೆ.",
     },
     "services.waterBill.label": {
       en: "Water bill collection",
@@ -191,7 +192,7 @@
     "services.waterBill.tip": {
       en: "Pay a periodic bill toward common water sourcing for your Zonity — with clear tracking, so you avoid messy WhatsApp threads and confusion.",
       te: "మీ జోనిటి ఉమ్మడి నీటి సరఫరా కోసం కాలానుగుణ బిల్లు చెల్లించండి — స్పష్టమైన ట్రాకింగ్‌తో, WhatsApp గందరగోళం లేకుండా.",
-      kn: "ನಿಮ್ಮ Zonityಯ ಸಾಮಾನ್ಯ ನೀರು ಪೂರೈಕೆಗೆ ನಿಯತಕಾಲಿಕ ಬಿಲ್ ಪಾವತಿಸಿ — ಸ್ಪಷ್ಟ ಟ್ರ್ಯಾಕಿಂಗ್‌ನೊಂದಿಗೆ, WhatsApp ಗೊಂದಲವಿಲ್ಲದೆ.",
+      kn: "ನಿಮ್ಮ ಜೋನಿಟಿ ಒಟ್ಟಿನ ನೀರು ಪೂರೈಕೆಗೆ ನಿಯತಕಾಲಿಕ ಬಿಲ್ ಪಾವತಿಸಿ — ಸ್ಪಷ್ಟ ಟ್ರ್ಯಾಕಿಂಗ್‌ನೊಂದಿಗೆ, WhatsApp ಗೊಂದಲವಿಲ್ಲದೆ.",
     },
     "services.homeCook.label": {
       en: "Home cook / community kitchen",
@@ -201,17 +202,17 @@
     "services.homeCook.tip": {
       en: "Order home-cooked meals from neighbors, or run a small community kitchen that serves people in your Zonity.",
       te: "పొరుగువారి నుండి ఇంటి వంట ఆర్డర్ చేయండి, లేదా మీ జోనిటి వారికి అందించే చిన్న సమూహ వంటశాల నడపండి.",
-      kn: "ನೆರೆಹೊರೆಯವರಿಂದ ಮನೆಯ ಅಡುಗೆ ಆರ್ಡರ್ ಮಾಡಿ, ಅಥವಾ ನಿಮ್ಮ Zonity ಜನರಿಗೆ ಸೇವೆ ನೀಡುವ ಸಣ್ಣ ಸಮುದಾಯ ಅಡುಗೆಮನೆ ನಡೆಸಿ.",
+      kn: "ನೆರೆಹೊರೆಯವರಿಂದ ಮನೆಯ ಅಡುಗೆ ಆರ್ಡರ್ ಮಾಡಿ, ಅಥವಾ ನಿಮ್ಮ ಜೋನಿಟಿ ಜನರಿಗೆ ಸೇವೆ ನೀಡುವ ಸಣ್ಣ ಸಮುದಾಯ ಅಡುಗೆಮನೆ ನಡೆಸಿ.",
     },
     "services.activities.label": {
       en: "Community activities",
       te: "సమూహ కార్యక్రమాలు",
-      kn: "ಸಮುದಾಯ ಚಟುವಟಿಕೆಗಳು",
+      kn: "ಸಮುದಾಯ ಕಾರ್ಯಕ್ರಮಗಳು",
     },
     "services.activities.tip": {
       en: "Create and join local activities — sports, walks, kids’ play, festivals, and get-togethers — with people in your Zonity.",
       te: "మీ జోనిటి వారితో స్థానిక కార్యక్రమాలు — క్రీడలు, నడకలు, పిల్లల ఆట, పండుగలు, కలిసి గడిపే సమయం — సృష్టించండి, చేరండి.",
-      kn: "ನಿಮ್ಮ Zonity ಜನರೊಂದಿಗೆ ಸ್ಥಳೀಯ ಚಟುವಟಿಕೆಗಳು — ಕ್ರೀಡೆ, ನಡಿಗೆ, ಮಕ್ಕಳ ಆಟ, ಹಬ್ಬಗಳು, ಕೂಡುವಿಕೆಗಳು — ರಚಿಸಿ, ಸೇರಿ.",
+      kn: "ನಿಮ್ಮ ಜೋನಿಟಿ ಜನರೊಂದಿಗೆ ಸ್ಥಳೀಯ ಕಾರ್ಯಕ್ರಮಗಳು — ಕ್ರೀಡೆ, ನಡಿಗೆ, ಮಕ್ಕಳ ಆಟ, ಹಬ್ಬಗಳು, ಕೂಡಿ ಕಳೆಯುವ ಸಮಯ — ರಚಿಸಿ, ಸೇರಿ.",
     },
     "services.neighbor.label": {
       en: "Neighbor help",
@@ -232,23 +233,23 @@
     "services.fruits.tip": {
       en: "Order fresh fruits and vegetables from outside vendors into scheduled delivery windows for your Zonity.",
       te: "మీ జోనిటికి నిర్ణీత డెలివరీ సమయాల్లో బయటి విక్రేతల నుండి తాజా పండ్లు, కూరగాయలు ఆర్డర్ చేయండి.",
-      kn: "ನಿಮ್ಮ Zonityಗೆ ನಿಗದಿತ ಡೆಲಿವರಿ ಸಮಯಗಳಲ್ಲಿ ಹೊರಗಿನ ಮಾರಾಟಗಾರರಿಂದ ತಾಜಾ ಹಣ್ಣುಗಳು, ತರಕಾರಿಗಳನ್ನು ಆರ್ಡರ್ ಮಾಡಿ.",
+      kn: "ನಿಮ್ಮ ಜೋನಿಟಿಗೆ ನಿಗದಿತ ಡೆಲಿವರಿ ಸಮಯಗಳಲ್ಲಿ ಹೊರಗಿನ ಮಾರಾಟಗಾರರಿಂದ ತಾಜಾ ಹಣ್ಣುಗಳು, ತರಕಾರಿಗಳನ್ನು ಆರ್ಡರ್ ಮಾಡಿ.",
     },
     "services.grocery.label": {
       en: "Grocery delivery",
       te: "కిరాణా డెలివరీ",
-      kn: "ದಿನಸಿ ಡೆಲಿವರಿ",
+      kn: "ಕಿರಾಣಿ ಡೆಲಿವರಿ",
     },
     "services.grocery.tip": {
       en: "Get grocery orders delivered to your Zonity on a clear schedule from providers who serve your area.",
       te: "మీ ప్రాంతానికి సేవలందించే ప్రొవైడర్ల నుండి స్పష్టమైన షెడ్యూల్‌తో మీ జోనిటికి కిరాణా డెలివరీ పొందండి.",
-      kn: "ನಿಮ್ಮ ಪ್ರದೇಶಕ್ಕೆ ಸೇವೆ ನೀಡುವ ಪ್ರೊವೈಡರ್‌ಗಳಿಂದ ಸ್ಪಷ್ಟ ವೇಳಾಪಟ್ಟಿಯೊಂದಿಗೆ ನಿಮ್ಮ Zonityಗೆ ದಿನಸಿ ಡೆಲಿವರಿ ಪಡೆಯಿರಿ.",
+      kn: "ನಿಮ್ಮ ಪ್ರದೇಶಕ್ಕೆ ಸೇವೆ ನೀಡುವ ಪ್ರೊವೈಡರ್‌ಗಳಿಂದ ಸ್ಪಷ್ಟ ವೇಳಾಪಟ್ಟಿಯೊಂದಿಗೆ ನಿಮ್ಮ ಜೋನಿಟಿಗೆ ಕಿರಾಣಿ ಡೆಲಿವರಿ ಪಡೆಯಿರಿ.",
     },
     "services.laundry.label": { en: "Laundry", te: "లాండ్రీ", kn: "ಲಾಂಡ್ರಿ" },
     "services.laundry.tip": {
       en: "Book scheduled laundry pickup and drop-off through providers who collect from and return to your Zonity.",
       te: "మీ జోనిటి నుండి తీసుకుని తిరిగి అందించే ప్రొవైడర్ల ద్వారా షెడ్యూల్ లాండ్రీ పికప్/డ్రాప్ బుక్ చేయండి.",
-      kn: "ನಿಮ್ಮ Zonityಯಿಂದ ತೆಗೆದುಕೊಂಡು ಹಿಂದಿರುಗಿಸುವ ಪ್ರೊವೈಡರ್‌ಗಳ ಮೂಲಕ ನಿಗದಿತ ಲಾಂಡ್ರಿ ಪಿಕಪ್/ಡ್ರಾಪ್ ಬುಕ್ ಮಾಡಿ.",
+      kn: "ನಿಮ್ಮ ಜೋನಿಟಿಯಿಂದ ತೆಗೆದುಕೊಂಡು ಹಿಂದಿರುಗಿಸುವ ಪ್ರೊವೈಡರ್‌ಗಳ ಮೂಲಕ ನಿಗದಿತ ಲಾಂಡ್ರಿ ಪಿಕಪ್/ಡ್ರಾಪ್ ಬುಕ್ ಮಾಡಿ.",
     },
     "services.waterCan.label": {
       en: "Water can delivery",
@@ -268,7 +269,7 @@
     "services.diagnostics.tip": {
       en: "Book lab tests and diagnostic services that visit or serve people in your Zonity.",
       te: "మీ జోనిటి వారికి వచ్చి సేవలందించే ల్యాబ్ పరీక్షలు, డయాగ్నస్టిక్ సేవలు బుక్ చేయండి.",
-      kn: "ನಿಮ್ಮ Zonity ಜನರಿಗೆ ಬಂದು ಸೇವೆ ನೀಡುವ ಲ್ಯಾಬ್ ಪರೀಕ್ಷೆಗಳು, ಡಯಾಗ್ನೋಸ್ಟಿಕ್ ಸೇವೆಗಳನ್ನು ಬುಕ್ ಮಾಡಿ.",
+      kn: "ನಿಮ್ಮ ಜೋನಿಟಿ ಜನರಿಗೆ ಬಂದು ಸೇವೆ ನೀಡುವ ಲ್ಯಾಬ್ ಪರೀಕ್ಷೆಗಳು, ಡಯಾಗ್ನೋಸ್ಟಿಕ್ ಸೇವೆಗಳನ್ನು ಬುಕ್ ಮಾಡಿ.",
     },
     "services.homeMaint.label": {
       en: "Periodic home maintenance",
@@ -283,7 +284,7 @@
     "services.facility.label": {
       en: "Facility maintenance",
       te: "సౌకర్యాల నిర్వహణ",
-      kn: "ಸೌಲಭ್ಯ ನಿರ್ವಹಣೆ",
+      kn: "ಸೌಲಭ್ಯಗಳ ನಿರ್ವಹಣೆ",
     },
     "services.facility.tip": {
       en: "Coordinate upkeep for shared spaces in apartments, campuses, and workplaces — not just individual homes.",
@@ -298,7 +299,7 @@
     "services.plumber.tip": {
       en: "Browse plumbers who cover your Zonity and pre-book a visit on a clear schedule for repairs or routine checks.",
       te: "మీ జోనిటి కవర్ చేసే ప్లంబర్లను చూడండి, మరమ్మతులు లేదా రొటీన్ చెక్‌లకు స్పష్టమైన సమయంలో ముందుగా బుక్ చేయండి.",
-      kn: "ನಿಮ್ಮ Zonity ಕವರ್ ಮಾಡುವ ಪ್ಲಂಬರ್‌ಗಳನ್ನು ನೋಡಿ, ದುರಸ್ತಿ ಅಥವಾ ರೊಟೀನ್ ಚೆಕ್‌ಗಳಿಗೆ ಸ್ಪಷ್ಟ ಸಮಯದಲ್ಲಿ ಮುಂಚಿತವಾಗಿ ಬುಕ್ ಮಾಡಿ.",
+      kn: "ನಿಮ್ಮ ಜೋನಿಟಿ ಕವರ್ ಮಾಡುವ ಪ್ಲಂಬರ್‌ಗಳನ್ನು ನೋಡಿ, ದುರಸ್ತಿ ಅಥವಾ ರೊಟೀನ್ ಚೆಕ್‌ಗಳಿಗೆ ಸ್ಪಷ್ಟ ಸಮಯದಲ್ಲಿ ಮುಂಚಿತವಾಗಿ ಬುಕ್ ಮಾಡಿ.",
     },
     "services.electrician.label": {
       en: "Find an electrician",
@@ -308,28 +309,28 @@
     "services.electrician.tip": {
       en: "Browse electricians who cover your Zonity and pre-book a visit on a clear schedule for repairs or routine checks.",
       te: "మీ జోనిటి కవర్ చేసే ఎలక్ట్రీషియన్లను చూడండి, మరమ్మతులు లేదా రొటీన్ చెక్‌లకు స్పష్టమైన సమయంలో ముందుగా బుక్ చేయండి.",
-      kn: "ನಿಮ್ಮ Zonity ಕವರ್ ಮಾಡುವ ಎಲೆಕ್ಟ್ರಿಷಿಯನ್‌ಗಳನ್ನು ನೋಡಿ, ದುರಸ್ತಿ ಅಥವಾ ರೊಟೀನ್ ಚೆಕ್‌ಗಳಿಗೆ ಸ್ಪಷ್ಟ ಸಮಯದಲ್ಲಿ ಮುಂಚಿತವಾಗಿ ಬುಕ್ ಮಾಡಿ.",
+      kn: "ನಿಮ್ಮ ಜೋನಿಟಿ ಕವರ್ ಮಾಡುವ ಎಲೆಕ್ಟ್ರಿಷಿಯನ್‌ಗಳನ್ನು ನೋಡಿ, ದುರಸ್ತಿ ಅಥವಾ ರೊಟೀನ್ ಚೆಕ್‌ಗಳಿಗೆ ಸ್ಪಷ್ಟ ಸಮಯದಲ್ಲಿ ಮುಂಚಿತವಾಗಿ ಬುಕ್ ಮಾಡಿ.",
     },
 
     "services.cityRentals.label": {
       en: "Rentals across the city",
       te: "నగరం అంతా అద్దెలు",
-      kn: "ನಗರದಾದ್ಯಂತ ಬಾಡಿಗೆ",
+      kn: "ನಗರದಾದ್ಯಂತ ಬಾಡಿಗೆಗಳು",
     },
     "services.cityRentals.tip": {
       en: "Search and enquire about rentals across the city — beyond your own Zonity — through the platform.",
       te: "ప్లాట్‌ఫారమ్ ద్వారా మీ జోనిటి దాటి నగరం అంతా అద్దెలు వెతకండి, విచారించండి.",
-      kn: "ಪ್ಲಾಟ್‌ಫಾರ್ಮ್ ಮೂಲಕ ನಿಮ್ಮ Zonity ಮೀರಿ ನಗರದಾದ್ಯಂತ ಬಾಡಿಗೆ ಹುಡುಕಿ, ವಿಚಾರಿಸಿ.",
+      kn: "ಪ್ಲಾಟ್‌ಫಾರ್ಮ್ ಮೂಲಕ ನಿಮ್ಮ ಜೋನಿಟಿ ದಾಟಿ ನಗರದಾದ್ಯಂತ ಬಾಡಿಗೆಗಳನ್ನು ಹುಡುಕಿ, ವಿಚಾರಿಸಿ.",
     },
     "services.commercial.label": {
       en: "Delivery between commercial Zonities",
       te: "వాణిజ్య జోనిటిల మధ్య డెలివరీ",
-      kn: "ವಾಣಿಜ್ಯ Zonityಗಳ ನಡುವೆ ಡೆಲಿವರಿ",
+      kn: "ವಾಣಿಜ್ಯ ಜೋನಿಟಿಗಳ ನಡುವೆ ಡೆಲಿವರಿ",
     },
     "services.commercial.tip": {
       en: "Move goods and deliveries between commercial Zonities that span more than one neighborhood on the platform.",
       te: "ప్లాట్‌ఫారమ్‌లో ఒకటి కంటే ఎక్కువ పొరుగు ప్రాంతాలు కలిగిన వాణిజ్య జోనిటిల మధ్య సరుకు, డెలివరీలు తరలించండి.",
-      kn: "ಪ್ಲಾಟ್‌ಫಾರ್ಮ್‌ನಲ್ಲಿ ಒಂದಕ್ಕಿಂತ ಹೆಚ್ಚು ನೆರೆಹೊರೆಗಳನ್ನು ಒಳಗೊಂಡ ವಾಣಿಜ್ಯ Zonityಗಳ ನಡುವೆ ಸರಕು, ಡೆಲಿವರಿಗಳನ್ನು ಸಾಗಿಸಿ.",
+      kn: "ಪ್ಲಾಟ್‌ಫಾರ್ಮ್‌ನಲ್ಲಿ ಒಂದಕ್ಕಿಂತ ಹೆಚ್ಚು ನೆರೆಹೊರೆಗಳನ್ನು ಒಳಗೊಂಡ ವಾಣಿಜ್ಯ ಜೋನಿಟಿಗಳ ನಡುವೆ ಸರಕು, ಡೆಲಿವರಿಗಳನ್ನು ಸಾಗಿಸಿ.",
     },
     "services.wholesale.label": {
       en: "Wholesale-to-retail delivery",
@@ -339,13 +340,13 @@
     "services.wholesale.tip": {
       en: "Move stock from wholesalers to retailers across Zonities — scheduled drops, clear routes, and less last-minute chasing.",
       te: "జోనిటిల మధ్య హోల్‌సేలర్ల నుండి రిటైలర్లకు స్టాక్ తరలించండి — షెడ్యూల్ డ్రాప్‌లు, స్పష్టమైన మార్గాలు, చివరి నిమిషపు తొందర తక్కువ.",
-      kn: "Zonityಗಳ ನಡುವೆ ಹೋಲ್‌ಸೇಲರ್‌ಗಳಿಂದ ರಿಟೇಲರ್‌ಗಳಿಗೆ ಸ್ಟಾಕ್ ಸಾಗಿಸಿ — ನಿಗದಿತ ಡ್ರಾಪ್‌ಗಳು, ಸ್ಪಷ್ಟ ಮಾರ್ಗಗಳು, ಕೊನೆಯ ನಿಮಿಷದ ಓಡಾಟ ಕಡಿಮೆ.",
+      kn: "ಜೋನಿಟಿಗಳ ನಡುವೆ ಹೋಲ್‌ಸೇಲರ್‌ಗಳಿಂದ ರಿಟೇಲರ್‌ಗಳಿಗೆ ಸ್ಟಾಕ್ ಸಾಗಿಸಿ — ನಿಗದಿತ ಡ್ರಾಪ್‌ಗಳು, ಸ್ಪಷ್ಟ ಮಾರ್ಗಗಳು, ಕೊನೆಯ ನಿಮಿಷದ ಓಡಾಟ ಕಡಿಮೆ.",
     },
 
     "services.mapNote": {
       en: "What you can use depends on what’s enabled and offered in your Zonity. Want to provide a service?",
       te: "మీరు ఉపయోగించేది మీ జోనిటిలో ఏమి ప్రారంభించబడింది, అందించబడుతోంది అనే దానిపై ఆధారపడి ఉంటుంది. సేవ అందించాలనుకుంటున్నారా?",
-      kn: "ನೀವು ಬಳಸುವುದು ನಿಮ್ಮ Zonityಯಲ್ಲಿ ಏನು ಸಕ್ರಿಯವಾಗಿದೆ, ನೀಡಲಾಗುತ್ತಿದೆ ಎಂಬುದರ ಮೇಲೆ ಅವಲಂಬಿಸಿದೆ. ಸೇವೆ ನೀಡಲು ಬಯಸುವಿರಾ?",
+      kn: "ನೀವು ಬಳಸುವುದು ನಿಮ್ಮ ಜೋನಿಟಿಯಲ್ಲಿ ಏನು ಪ್ರಾರಂಭವಾಗಿದೆ, ನೀಡಲಾಗುತ್ತಿದೆ ಎಂಬುದರ ಮೇಲೆ ಅವಲಂಬಿಸಿದೆ. ಸೇವೆ ನೀಡಲು ಬಯಸುವಿರಾ?",
     },
 
     "about.eyebrow": { en: "About", te: "గురించి", kn: "ಬಗ್ಗೆ" },
@@ -357,39 +358,39 @@
     "about.lead": {
       en: "<strong>Zonited</strong> is a digital platform that connects people, businesses, and services within geographically defined communities called <strong>Zonities</strong>.",
       te: "<strong>జొనైటెడ్</strong> అనేది <strong>జోనిటిలు</strong> అనే భౌగోళికంగా నిర్వచించిన సమూహాల్లో ప్రజలు, వ్యాపారాలు, సేవలను కలిపే డిజిటల్ ప్లాట్‌ఫారమ్.",
-      kn: "<strong>Zonited</strong> ಎಂಬುದು <strong>Zonities</strong> ಎಂಬ ಭೌಗೋಳಿಕವಾಗಿ ವ್ಯಾಖ್ಯಾನಿಸಿದ ಸಮುದಾಯಗಳಲ್ಲಿ ಜನರು, ವ್ಯಾಪಾರಗಳು ಮತ್ತು ಸೇವೆಗಳನ್ನು ಕೊಂಡಿಸುವ ಡಿಜಿಟಲ್ ಪ್ಲಾಟ್‌ಫಾರ್ಮ್.",
+      kn: "<strong>ಜೊನೈಟೆಡ್</strong> ಎಂಬುದು <strong>ಜೋನಿಟಿಗಳು</strong> ಎಂಬ ಭೌಗೋಳಿಕವಾಗಿ ನಿರ್ದಿಷ್ಟಪಡಿಸಿದ ಸಮೂಹಗಳಲ್ಲಿ ಜನರು, ವ್ಯಾಪಾರಗಳು, ಸೇವೆಗಳನ್ನು ಕೊಂಡಿಸುವ ಡಿಜಿಟಲ್ ಪ್ಲಾಟ್‌ಫಾರ್ಮ್.",
     },
     "about.follow": {
       en: "A <strong>Zonity</strong> is the group for your apartment, colony, street, or workplace — where those local services come together.",
-      te: "<strong>జోనిటి</strong> అనేది మీ అపార్ట్‌మెంట్, కాలనీ, వీధి లేదా కార్యాలయం కోసం సమూహం — అక్కడే ఆ స్థానిక సేవలు కలుస్తాయి.",
-      kn: "<strong>Zonity</strong> ಎಂಬುದು ನಿಮ್ಮ ಅಪಾರ್ಟ್‌ಮೆಂಟ್, ಕಾಲೋನಿ, ಬೀದಿ ಅಥವಾ ಕಚೇರಿಗಾಗಿ ಗುಂಪು — ಅಲ್ಲಿಯೇ ಆ ಸ್ಥಳೀಯ ಸೇವೆಗಳು ಸೇರುತ್ತವೆ.",
+      te: "<strong>జోనిటీ</strong> అనేది మీ అపార్ట్‌మెంట్, కాలనీ, వీధి లేదా కార్యాలయం కోసం ఒక గ్రూప్. అక్కడే మీ స్థానిక సేవలన్నీ లభిస్తాయి.",
+      kn: "<strong>ಜೋನಿಟೀ</strong> ಎಂಬುದು ನಿಮ್ಮ ಅಪಾರ್ಟ್‌ಮೆಂಟ್, ಕಾಲೋನಿ, ಬೀದಿ ಅಥವಾ ಕಚೇರಿಗಾಗಿ ಒಂದು ಗ್ರೂಪ್. ಅಲ್ಲಿಯೇ ನಿಮ್ಮ ಸ್ಥಳೀಯ ಸೇವೆಗಳೆಲ್ಲಾ ಲಭ್ಯವಾಗುತ್ತವೆ.",
     },
     "about.visualAlt": {
       en: "Commercial and light-industrial Zonity with shops, workshops, and local trade",
       te: "దుకాణాలు, వర్క్‌షాప్‌లు, స్థానిక వ్యాపారంతో వాణిజ్య / లైట్-ఇండస్ట్రియల్ జోనిటి",
-      kn: "ಅಂಗಡಿಗಳು, ವರ್ಕ್‌ಶಾಪ್‌ಗಳು ಮತ್ತು ಸ್ಥಳೀಯ ವ್ಯಾಪಾರದೊಂದಿಗೆ ವಾಣಿಜ್ಯ / ಲೈಟ್-ಇಂಡಸ್ಟ್ರಿಯಲ್ Zonity",
+      kn: "ಅಂಗಡಿಗಳು, ವರ್ಕ್‌ಶಾಪ್‌ಗಳು, ಸ್ಥಳೀಯ ವ್ಯಾಪಾರದೊಂದಿಗೆ ವಾಣಿಜ್ಯ / ಲೈಟ್-ಇಂಡಸ್ಟ್ರಿಯಲ್ ಜೋನಿಟಿ",
     },
     "about.caption": {
       en: "Same local map with different mixes of services for homes and workspaces.",
       te: "ఇళ్లు, కార్యాలయాల కోసం వేర్వేరు సేవల మిశ్రమంతో అదే స్థానిక మ్యాప్.",
-      kn: "ಮನೆಗಳು ಮತ್ತು ಕೆಲಸದ ಸ್ಥಳಗಳಿಗೆ ವಿವಿಧ ಸೇವೆಗಳ ಮಿಶ್ರಣದೊಂದಿಗೆ ಅದೇ ಸ್ಥಳೀಯ ನಕ್ಷೆ.",
+      kn: "ಮನೆಗಳು, ಕಚೇರಿಗಳಿಗೆ ವಿವಿಧ ಸೇವೆಗಳ ಮಿಶ್ರಣದೊಂದಿಗೆ ಅದೇ ಸ್ಥಳೀಯ ಮ್ಯಾಪ್.",
     },
     "about.sealAlt": {
       en: "Zonited mark — people connected as a Z",
       te: "Zonited చిహ్నం — Zగా కలిసిన ప్రజలు",
-      kn: "Zonited ಚಿಹ್ನೆ — Z ಆಗಿ ಸಂಪರ್ಕಿತ ಜನರು",
+      kn: "Zonited ಚಿಹ್ನೆ — Z ಆಗಿ ಕೂಡಿದ ಜನರು",
     },
     "about.sealLine": {
       en: "Connecting people and businesses around what you need.",
-      te: "మీకు కావాల్సినవాటి చుట్టూ ప్రజలు, వ్యాపారాలను కలుపుతోంది.",
-      kn: "ನಿಮಗೆ ಬೇಕಾದದ್ದರ ಸುತ್ತಲೂ ಜನರು ಮತ್ತು ವ್ಯಾಪಾರಗಳನ್ನು ಕೊಂಡಿಸುತ್ತದೆ.",
+      te: "మీకు కావలసిన స్థానిక సేవలన్నింటినీ మీకు కలుపుతుంది.",
+      kn: "ನಿಮಗೆ ಬೇಕಾದ ಸ್ಥಳೀಯ ಸೇವೆಗಳೆಲ್ಲವನ್ನೂ ನಿಮಗೆ ಕೊಂಡಿಸುತ್ತದೆ.",
     },
 
     "footer.app": {
       en: "Already in a Zonity? Open the app",
       te: "ఇప్పటికే జోనిటిలో ఉన్నారా? యాప్ తెరవండి",
-      kn: "ಈಗಾಗಲೇ Zonityಯಲ್ಲಿದ್ದೀರಾ? ಅಪ್ಲಿಕೇಶನ್ ತೆರೆಯಿರಿ",
+      kn: "ಈಗಾಗಲೇ ಜೋನಿಟಿಯಲ್ಲಿದ್ದೀರಾ? ಆಪ್ ತೆರೆಯಿರಿ",
     },
-    "footer.privacy": { en: "Privacy", te: "గోప్యత", kn: "ಗೌಪ್ಯತೆ" },
+    "footer.privacy": { en: "Privacy", te: "గోప్యత", kn: "ಗೌಪ్యತೆ" },
   };
 })(typeof window !== "undefined" ? window : globalThis);
