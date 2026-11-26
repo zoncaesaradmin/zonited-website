@@ -3,52 +3,81 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Zonited | Everything you need, around you</title>
+    <title data-i18n="meta.title">Zonited | Everything you need, around you</title>
     <meta
       name="description"
+      data-i18n-attr="content:meta.description"
       content="Simplify neighborhood life — local services and shared workflows, in one community."
     />
     <meta property="og:type" content="website" />
     <link rel="canonical" href="https://zonited.com/" />
     <meta property="og:url" content="https://zonited.com/" />
     <meta property="og:site_name" content="Zonited" />
-    <meta property="og:title" content="Zonited | Everything you need, around you" />
+    <meta
+      property="og:title"
+      data-i18n-attr="content:meta.title"
+      content="Zonited | Everything you need, around you"
+    />
     <meta
       property="og:description"
+      data-i18n-attr="content:meta.description"
       content="Simplify neighborhood life — local services and shared workflows, in one community."
     />
     <meta property="og:image" content="https://zonited.com/assets/brand/og-share.jpg?v=hero47" />
     <meta property="og:image:type" content="image/jpeg" />
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
-    <meta property="og:image:alt" content="Zonited — everything you need, around you" />
+    <meta
+      property="og:image:alt"
+      data-i18n-attr="content:meta.ogImageAlt"
+      content="Zonited — everything you need, around you"
+    />
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="Zonited | Everything you need, around you" />
+    <meta
+      name="twitter:title"
+      data-i18n-attr="content:meta.title"
+      content="Zonited | Everything you need, around you"
+    />
     <meta
       name="twitter:description"
+      data-i18n-attr="content:meta.description"
       content="Simplify neighborhood life — local services and shared workflows, in one community."
     />
     <meta name="twitter:image" content="https://zonited.com/assets/brand/og-share.jpg?v=hero47" />
-    <meta name="twitter:image:alt" content="Zonited — everything you need, around you" />
+    <meta
+      name="twitter:image:alt"
+      data-i18n-attr="content:meta.ogImageAlt"
+      content="Zonited — everything you need, around you"
+    />
     <link rel="icon" type="image/png" sizes="32x32" href="./assets/brand/favicon-32.png?v=hero47" />
     <link rel="icon" type="image/png" sizes="16x16" href="./assets/brand/favicon-16.png?v=hero47" />
     <link rel="apple-touch-icon" href="./assets/brand/apple-touch-icon.png?v=hero47" />
     <meta name="theme-color" content="#fff9f1" />
-    <link rel="stylesheet" href="./styles.css?v=hero47" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+Kannada:wght@400;600;700&family=Noto+Sans+Telugu:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./styles.css?v=hero52" />
   </head>
   <body>
-    <a class="skip-link" href="#main">Skip to content</a>
+    <a class="skip-link" href="#main" data-i18n="a11y.skip">Skip to content</a>
     <div class="page-shell page-shell-top" id="top">
       <header class="topbar">
-        <a class="brand" href="#top" aria-label="Zonited home">
+        <a class="brand" href="#top" data-i18n-attr="aria-label:a11y.brandHome" aria-label="Zonited home">
           <img class="brand-mark" src="./assets/brand/zon-mark-sm.png?v=hero47" width="512" height="512" alt="" aria-hidden="true" />
           <span class="brand-text">Zonited</span>
         </a>
-        <nav class="topnav" aria-label="Primary">
-          <a href="#zonity">How it works</a>
-          <a href="#services">Services</a>
-          <a href="#about">About</a>
+        <nav class="topnav" data-i18n-attr="aria-label:a11y.primaryNav" aria-label="Primary">
+          <a class="topnav-how" href="#zonity" data-i18n="nav.howItWorks">How it works</a>
+          <a href="#services" data-i18n="nav.services">Services</a>
+          <a href="#about" data-i18n="nav.about">About</a>
         </nav>
+        <label class="lang-switch">
+          <span class="visually-hidden" data-i18n="a11y.lang">Language</span>
+          <select id="lang-select" data-i18n-attr="aria-label:a11y.lang" aria-label="Language"></select>
+        </label>
       </header>
     </div>
 
@@ -74,29 +103,35 @@
               height="122"
               alt="Zonited"
             />
-            <h1 id="benefit-heading">Everything you need, around you.</h1>
-            <p class="benefit-hero-support">
+            <h1 id="benefit-heading" data-i18n="hero.headline">Everything you need, around you.</h1>
+            <p class="benefit-hero-support" data-i18n="hero.support">
               Simplify neighborhood life — local services and shared workflows, in one community.
             </p>
-            <div class="benefit-hero-actions" aria-label="Get started on WhatsApp">
+            <div
+              class="benefit-hero-actions"
+              data-i18n-attr="aria-label:a11y.heroActions"
+              aria-label="Get started on WhatsApp"
+            >
               <a
                 class="hero-cta hero-cta-join"
+                data-i18n-wa="cta.join.prefill"
                 href="https://wa.me/918310880446?text=Hi%2C%20I%20would%20like%20to%20learn%20more%20about%20joining%20a%20Zonity."
                 target="_blank"
                 rel="noopener noreferrer"
               >
                 <img class="wa-logo" src="./assets/brand/whatsapp.svg?v=hero47" width="28" height="28" alt="" />
-                Join a Zonity
+                <span data-i18n="cta.join.label">Join a Zonity</span>
               </a>
               <a
                 id="become-provider"
                 class="hero-cta hero-cta-provider"
+                data-i18n-wa="cta.provider.prefill"
                 href="https://wa.me/918310880446?text=Hi%2C%20I%20would%20like%20to%20register%20interest%20as%20a%20partner%20%2F%20operator%20%2F%20vendor%20for%20Zonity."
                 target="_blank"
                 rel="noopener noreferrer"
               >
                 <img class="wa-logo" src="./assets/brand/whatsapp.svg?v=hero47" width="28" height="28" alt="" />
-                Become a provider
+                <span data-i18n="cta.provider.label">Become a provider</span>
               </a>
             </div>
           </div>
@@ -106,8 +141,8 @@
       <div class="page-shell">
         <section class="visual-block" id="zonity" aria-labelledby="zonity-heading">
           <div class="visual-block-head">
-            <p class="eyebrow">What is a Zonity</p>
-            <h2 id="zonity-heading">Your neighborhood zone, connected</h2>
+            <p class="eyebrow" data-i18n="zonity.eyebrow">What is a Zonity</p>
+            <h2 id="zonity-heading" data-i18n="zonity.heading">Your neighborhood zone, connected</h2>
           </div>
           <figure class="diagram-board">
             <picture>
@@ -119,6 +154,7 @@
                 src="./assets/zonity-diagram.jpg?v=hero50"
                 width="1254"
                 height="1254"
+                data-i18n-attr="alt:zonity.diagramAlt"
                 alt="Zonity diagram: a local colony map connecting residents, shops, and services around a shared place"
                 loading="lazy"
                 decoding="async"
@@ -129,101 +165,102 @@
 
         <section class="visual-block" id="services" aria-labelledby="services-heading">
           <div class="visual-block-head">
-            <p class="eyebrow">Services</p>
-            <h2 id="services-heading">Services you may use or offer</h2>
+            <p class="eyebrow" data-i18n="services.eyebrow">Services</p>
+            <h2 id="services-heading" data-i18n="services.heading">Services you may use or offer</h2>
             <p class="legend">
-              <span class="legend-live">Available</span>
-              <span class="legend-soon">Upcoming</span>
+              <span class="legend-live" data-i18n="services.legendLive">Available</span>
+              <span class="legend-soon" data-i18n="services.legendSoon">Upcoming</span>
             </p>
           </div>
 
           <div class="services-map">
           <div class="explore-family family-within" id="services-inside">
             <div class="family-head">
-              <p class="family-cue">Inside</p>
-              <h3>Within your Zonity</h3>
+              <p class="family-cue" data-i18n="services.inside.cue">Inside</p>
+              <h3 data-i18n="services.inside.heading">Within your Zonity</h3>
             </div>
             <ul class="service-chip-list">
               <li>
-                <button type="button" class="service-chip is-available" data-tip="List or find homes or shops to rent within your Zonity. Optionally make the listing visible across other Zonities." aria-expanded="false">Rentals in your Zonity</button>
+                <button type="button" class="service-chip is-available" data-i18n="services.rentals.label" data-i18n-attr="data-tip:services.rentals.tip" data-tip="List or find homes or shops to rent within your Zonity. Optionally make the listing visible across other Zonities." aria-expanded="false">Rentals in your Zonity</button>
               </li>
               <li>
-                <button type="button" class="service-chip is-coming" data-tip="Pool money with neighbors for shared needs — festivals, repairs, gifts, or community projects — with clear tracking inside your Zonity." aria-expanded="false">Fund collection</button>
+                <button type="button" class="service-chip is-coming" data-i18n="services.fund.label" data-i18n-attr="data-tip:services.fund.tip" data-tip="Pool money with neighbors for shared needs — festivals, repairs, gifts, or community projects — with clear tracking inside your Zonity." aria-expanded="false">Fund collection</button>
               </li>
               <li>
-                <button type="button" class="service-chip is-coming" data-tip="Pay a periodic bill toward common water sourcing for your Zonity — with clear tracking, so you avoid messy WhatsApp threads and confusion." aria-expanded="false">Water bill collection</button>
+                <button type="button" class="service-chip is-coming" data-i18n="services.waterBill.label" data-i18n-attr="data-tip:services.waterBill.tip" data-tip="Pay a periodic bill toward common water sourcing for your Zonity — with clear tracking, so you avoid messy WhatsApp threads and confusion." aria-expanded="false">Water bill collection</button>
               </li>
               <li>
-                <button type="button" class="service-chip is-coming" data-tip="Order home-cooked meals from neighbors, or run a small community kitchen that serves people in your Zonity." aria-expanded="false">Home cook / community kitchen</button>
+                <button type="button" class="service-chip is-coming" data-i18n="services.homeCook.label" data-i18n-attr="data-tip:services.homeCook.tip" data-tip="Order home-cooked meals from neighbors, or run a small community kitchen that serves people in your Zonity." aria-expanded="false">Home cook / community kitchen</button>
               </li>
               <li>
-                <button type="button" class="service-chip is-coming" data-tip="Create and join local activities — sports, walks, kids’ play, festivals, and get-togethers — with people in your Zonity." aria-expanded="false">Community activities</button>
+                <button type="button" class="service-chip is-coming" data-i18n="services.activities.label" data-i18n-attr="data-tip:services.activities.tip" data-tip="Create and join local activities — sports, walks, kids’ play, festivals, and get-togethers — with people in your Zonity." aria-expanded="false">Community activities</button>
               </li>
               <li>
-                <button type="button" class="service-chip is-coming" data-tip="Post a clear request — a few hours of help, company for an errand, borrowing a tool — and let neighbors volunteer free or for a small fee." aria-expanded="false">Neighbor help</button>
+                <button type="button" class="service-chip is-coming" data-i18n="services.neighbor.label" data-i18n-attr="data-tip:services.neighbor.tip" data-tip="Post a clear request — a few hours of help, company for an errand, borrowing a tool — and let neighbors volunteer free or for a small fee." aria-expanded="false">Neighbor help</button>
               </li>
             </ul>
           </div>
 
           <div class="explore-family family-outside" id="services-outside">
             <div class="family-head">
-              <p class="family-cue">Into your zone</p>
-              <h3>From providers outside your Zonity</h3>
+              <p class="family-cue" data-i18n="services.outside.cue">Into your zone</p>
+              <h3 data-i18n="services.outside.heading">From providers outside your Zonity</h3>
             </div>
             <ul class="service-chip-list">
               <li>
-                <button type="button" class="service-chip is-available" data-tip="Order fresh fruits and vegetables from outside vendors into scheduled delivery windows for your Zonity." aria-expanded="false">Fresh fruits &amp; vegetables</button>
+                <button type="button" class="service-chip is-available" data-i18n="services.fruits.label" data-i18n-attr="data-tip:services.fruits.tip" data-tip="Order fresh fruits and vegetables from outside vendors into scheduled delivery windows for your Zonity." aria-expanded="false">Fresh fruits &amp; vegetables</button>
               </li>
               <li>
-                <button type="button" class="service-chip is-available" data-tip="Get grocery orders delivered to your Zonity on a clear schedule from providers who serve your area." aria-expanded="false">Grocery delivery</button>
+                <button type="button" class="service-chip is-available" data-i18n="services.grocery.label" data-i18n-attr="data-tip:services.grocery.tip" data-tip="Get grocery orders delivered to your Zonity on a clear schedule from providers who serve your area." aria-expanded="false">Grocery delivery</button>
               </li>
               <li>
-                <button type="button" class="service-chip is-coming" data-tip="Book scheduled laundry pickup and drop-off through providers who collect from and return to your Zonity." aria-expanded="false">Laundry</button>
+                <button type="button" class="service-chip is-coming" data-i18n="services.laundry.label" data-i18n-attr="data-tip:services.laundry.tip" data-tip="Book scheduled laundry pickup and drop-off through providers who collect from and return to your Zonity." aria-expanded="false">Laundry</button>
               </li>
               <li>
-                <button type="button" class="service-chip is-coming" data-tip="Schedule drinking-water can delivery to your apartment, colony, or workplace on a recurring or on-demand basis." aria-expanded="false">Water can delivery</button>
+                <button type="button" class="service-chip is-coming" data-i18n="services.waterCan.label" data-i18n-attr="data-tip:services.waterCan.tip" data-tip="Schedule drinking-water can delivery to your apartment, colony, or workplace on a recurring or on-demand basis." aria-expanded="false">Water can delivery</button>
               </li>
               <li>
-                <button type="button" class="service-chip is-coming" data-tip="Book lab tests and diagnostic services that visit or serve people in your Zonity." aria-expanded="false">Diagnostics &amp; lab tests</button>
+                <button type="button" class="service-chip is-coming" data-i18n="services.diagnostics.label" data-i18n-attr="data-tip:services.diagnostics.tip" data-tip="Book lab tests and diagnostic services that visit or serve people in your Zonity." aria-expanded="false">Diagnostics &amp; lab tests</button>
               </li>
               <li>
-                <button type="button" class="service-chip is-coming" data-tip="Schedule recurring home upkeep — cleaning, minor repairs, and preventive maintenance — from outside providers." aria-expanded="false">Periodic home maintenance</button>
+                <button type="button" class="service-chip is-coming" data-i18n="services.homeMaint.label" data-i18n-attr="data-tip:services.homeMaint.tip" data-tip="Schedule recurring home upkeep — cleaning, minor repairs, and preventive maintenance — from outside providers." aria-expanded="false">Periodic home maintenance</button>
               </li>
               <li>
-                <button type="button" class="service-chip is-coming" data-tip="Coordinate upkeep for shared spaces in apartments, campuses, and workplaces — not just individual homes." aria-expanded="false">Facility maintenance</button>
+                <button type="button" class="service-chip is-coming" data-i18n="services.facility.label" data-i18n-attr="data-tip:services.facility.tip" data-tip="Coordinate upkeep for shared spaces in apartments, campuses, and workplaces — not just individual homes." aria-expanded="false">Facility maintenance</button>
               </li>
               <li>
-                <button type="button" class="service-chip is-coming" data-tip="Browse plumbers who cover your Zonity and pre-book a visit on a clear schedule for repairs or routine checks." aria-expanded="false">Find a plumber</button>
+                <button type="button" class="service-chip is-coming" data-i18n="services.plumber.label" data-i18n-attr="data-tip:services.plumber.tip" data-tip="Browse plumbers who cover your Zonity and pre-book a visit on a clear schedule for repairs or routine checks." aria-expanded="false">Find a plumber</button>
               </li>
               <li>
-                <button type="button" class="service-chip is-coming" data-tip="Browse electricians who cover your Zonity and pre-book a visit on a clear schedule for repairs or routine checks." aria-expanded="false">Find an electrician</button>
+                <button type="button" class="service-chip is-coming" data-i18n="services.electrician.label" data-i18n-attr="data-tip:services.electrician.tip" data-tip="Browse electricians who cover your Zonity and pre-book a visit on a clear schedule for repairs or routine checks." aria-expanded="false">Find an electrician</button>
               </li>
             </ul>
           </div>
 
           <div class="explore-family family-across" id="services-platform">
             <div class="family-head">
-              <p class="family-cue">Citywide &amp; trade</p>
-              <h3>Across Zonities on the platform</h3>
+              <p class="family-cue" data-i18n="services.across.cue">Citywide &amp; trade</p>
+              <h3 data-i18n="services.across.heading">Across Zonities on the platform</h3>
             </div>
             <ul class="service-chip-list">
               <li>
-                <button type="button" class="service-chip is-available" data-tip="Search and enquire about rentals across the city — beyond your own Zonity — through the platform." aria-expanded="false">Rentals across the city</button>
+                <button type="button" class="service-chip is-available" data-i18n="services.cityRentals.label" data-i18n-attr="data-tip:services.cityRentals.tip" data-tip="Search and enquire about rentals across the city — beyond your own Zonity — through the platform." aria-expanded="false">Rentals across the city</button>
               </li>
               <li>
-                <button type="button" class="service-chip is-coming" data-tip="Move goods and deliveries across commercial zones that span more than one neighborhood on the platform." aria-expanded="false">Delivery across commercial zones</button>
+                <button type="button" class="service-chip is-coming" data-i18n="services.commercial.label" data-i18n-attr="data-tip:services.commercial.tip" data-tip="Move goods and deliveries across commercial zones that span more than one neighborhood on the platform." aria-expanded="false">Delivery across commercial zones</button>
               </li>
               <li>
-                <button type="button" class="service-chip is-coming" data-tip="Move stock from wholesalers to retailers across Zonities — scheduled drops, clear routes, and less last-minute chasing." aria-expanded="false">Wholesale-to-retail delivery</button>
+                <button type="button" class="service-chip is-coming" data-i18n="services.wholesale.label" data-i18n-attr="data-tip:services.wholesale.tip" data-tip="Move stock from wholesalers to retailers across Zonities — scheduled drops, clear routes, and less last-minute chasing." aria-expanded="false">Wholesale-to-retail delivery</button>
               </li>
             </ul>
           </div>
           </div>
 
           <p class="map-note">
-            What you can use depends on what’s enabled and offered in your Zonity.
-            Want to provide a service?
+            <span data-i18n="services.mapNote">What you can use depends on what’s enabled and offered in your Zonity. Want to provide a service?</span>
             <a
+              data-i18n="cta.provider.label"
+              data-i18n-wa="cta.provider.prefill"
               href="https://wa.me/918310880446?text=Hi%2C%20I%20would%20like%20to%20register%20interest%20as%20a%20partner%20%2F%20operator%20%2F%20vendor%20for%20Zonity."
               target="_blank"
               rel="noopener noreferrer"
@@ -233,16 +270,20 @@
 
         <section class="visual-block about-block" id="about" aria-labelledby="about-heading">
           <div class="visual-block-head">
-            <p class="eyebrow">About</p>
-            <h2 id="about-heading">What is Zonited?</h2>
+            <p class="eyebrow" data-i18n="about.eyebrow">About</p>
+            <h2 id="about-heading" data-i18n="about.heading">What is Zonited?</h2>
           </div>
-          <div class="platform-band about-band" aria-label="What Zonited and a Zonity are">
-            <p class="platform-band-lead">
+          <div
+            class="platform-band about-band"
+            data-i18n-attr="aria-label:a11y.aboutBand"
+            aria-label="What Zonited and a Zonity are"
+          >
+            <p class="platform-band-lead" data-i18n-html="about.lead">
               <strong>Zonited</strong> is a digital platform that connects people,
               businesses, and services within geographically defined communities called
               <strong>Zonities</strong>.
             </p>
-            <p class="platform-band-lead about-band-follow">
+            <p class="platform-band-lead about-band-follow" data-i18n-html="about.follow">
               A <strong>Zonity</strong> is the group for your apartment, colony, street, or workplace —
               where those local services come together.
             </p>
@@ -253,11 +294,12 @@
               src="./assets/hero/commercial-board.jpg?v=hero47"
               width="1600"
               height="900"
+              data-i18n-attr="alt:about.visualAlt"
               alt="Commercial and light-industrial Zonity with shops, workshops, and local trade"
               loading="lazy"
               decoding="async"
             />
-            <figcaption>Same local map with different mixes of services for homes and workspaces.</figcaption>
+            <figcaption data-i18n="about.caption">Same local map with different mixes of services for homes and workspaces.</figcaption>
           </figure>
           <div class="about-seal">
             <img
@@ -265,11 +307,12 @@
               src="./assets/brand/zon-mark-sm.png?v=hero47"
               width="512"
               height="512"
+              data-i18n-attr="alt:about.sealAlt"
               alt="Zonited mark — people connected as a Z"
               loading="lazy"
               decoding="async"
             />
-            <p class="about-seal-line">Connecting people and businesses around what you need.</p>
+            <p class="about-seal-line" data-i18n="about.sealLine">Connecting people and businesses around what you need.</p>
           </div>
         </section>
       </div>
@@ -278,13 +321,15 @@
     <div class="page-shell page-shell-foot">
       <footer class="site-footer">
         <p>© Zonited</p>
-        <nav class="footer-meta" aria-label="Site">
-          <a class="footer-app" href="https://app.zonited.com/">Already in a Zonity? Open the app</a>
-          <a href="./privacy.html">Privacy</a>
+        <nav class="footer-meta" data-i18n-attr="aria-label:a11y.footerNav" aria-label="Site">
+          <a class="footer-app" href="https://app.zonited.com/" data-i18n="footer.app">Already in a Zonity? Open the app</a>
+          <a href="./privacy.html" data-i18n="footer.privacy">Privacy</a>
         </nav>
       </footer>
     </div>
 
+    <script src="./i18n/strings.js?v=hero52"></script>
+    <script src="./i18n/runtime.js?v=hero52"></script>
     <script>
       /* Logo → top: re-scroll even when the hash is already #top */
       (function () {
@@ -388,7 +433,6 @@
           tip.style.top = Math.round(top) + "px";
           tip.style.left = Math.round(left) + "px";
 
-          // If tip sits below the fold a bit, bring chip+tip into view
           var tipBottom = top + tipRect.height + MARGIN;
           if (tipBottom > window.innerHeight) {
             chip.scrollIntoView({
@@ -452,7 +496,6 @@
           if (active) placeTip(active);
         });
 
-        // One soft pulse on first Available chip when services enter view (once per session)
         try {
           if (
             !reduceMotion.matches &&
