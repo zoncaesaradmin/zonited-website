@@ -90,9 +90,9 @@
       kn: "ಜೋನಿಟಿಯಲ್ಲಿ ಸೇರಿ",
     },
     "cta.join.prefill": {
-      en: "Hi, I would like to learn more about joining a Zonity.",
-      te: "హాయ్, నేను జోనిటిలో చేరడం గురించి మరింత తెలుసుకోవాలనుకుంటున్నాను.",
-      kn: "ಹಾಯ್, ನಾನು ಜೋನಿಟಿಯಲ್ಲಿ ಸೇರುವ ಬಗ್ಗೆ ಇನ್ನಷ್ಟು ತಿಳಿದುಕೊಳ್ಳಲು ಬಯಸುತ್ತೇನೆ.",
+      en: "Hi, I would like to join the Zonity of my location.",
+      te: "హాయ్, నేను నా లొకేషన్‌లో ఉన్న జోనిటీలో చేరాలనుకుంటున్నాను.",
+      kn: "ಹಾಯ್, ನಾನು ನನ್ನ ಲೊಕೇಶನ್‌ನಲ್ಲಿರುವ ಜೋನಿಟೀಯಲ್ಲಿ ಸೇರಲು ಬಯಸುತ್ತೇನೆ.",
     },
     "cta.provider.label": {
       en: "Become a provider",
@@ -106,14 +106,14 @@
     },
 
     "zonity.eyebrow": {
-      en: "What is a Zonity",
-      te: "జోనిటి అంటే ఏమిటి?",
-      kn: "ಜೋನಿಟಿ ಎಂದರೇನು?",
+      en: "What it means for you",
+      te: "మీకు ఇలా ఉపయోగపడుతుంది",
+      kn: "ನಿಮಗೆ ಹೀಗೆ ಉಪಯೋಗವಾಗುತ್ತದೆ",
     },
     "zonity.heading": {
-      en: "Your neighborhood zone, connected",
-      te: "మీరున్న చోటు, ఒకటిగా కలిసి",
-      kn: "ನೀವಿರುವ ಜಾಗ, ಒಂದಾಗಿ ಕೂಡಿ",
+      en: "How your neighborhood comes together",
+      te: "మీ సమీపంలో అన్నీ అందుబాటులో",
+      kn: "ನಿಮ್ಮ ಸಮೀಪದಲ್ಲಿ ಎಲ್ಲವೂ ಲಭ್ಯ",
     },
     "zonity.diagramAlt": {
       en: "Zonity diagram: a local colony map connecting residents, shops, and services around a shared place",
@@ -382,7 +382,7 @@
       kn: "Zonited ಚಿಹ್ನೆ — Z ಆಗಿ ಕೂಡಿದ ಜನರು",
     },
     "about.sealLine": {
-      en: "Connecting people and businesses around what you need.",
+      en: "Connecting people and businesses around you.",
       te: "మీకు కావాల్సిన స్థానిక సేవలన్నింటిని మీకు చేరుస్తుంది.",
       kn: "ನಿಮಗೆ ಬೇಕಾದ ಸ್ಥಳೀಯ ಸೇವೆಗಳೆಲ್ಲವನ್ನೂ ನಿಮಗೆ ಕೊಂಡಿಸುತ್ತದೆ.",
     },
